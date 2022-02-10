@@ -71,6 +71,49 @@ class C6():
         if btn_entrar:
             log.info('Acessando o portal')
             btn_entrar.click()
+            
+            #INICIANDO VERIFICAÇÃO DO MFA
+            campo_mfa = check_exists_by_id(self.driver, 'mfaPassCode', ativo=True)
+            if campo_mfa:
+                log.info('Abrindo aplicativo OKTA para pegar o código')     
+                pyautogui.press("win")
+                sleep(0.5)
+                pyautogui.write("Okta")
+                sleep(0.5)
+                pyautogui.press("backspace")
+                sleep(0.5)
+                pyautogui.press('enter')
+                sleep(16)
+                #Dando duplo clique para copiar o código
+                pyautogui.doubleClick(x=97, y=135)
+                sleep(0.5)
+                #Clicando no X para fechar
+                pyautogui.click(x=193, y=17)
+                sleep(0.5)
+                #Clicando em confirmar fechamento
+                pyautogui.click(x=276, y=239)
+                sleep(0.5)
+                #CLIANDO NO CAMPO DE DIGITAR O CÓDIGO 
+                log.info('Clicando no campo de digitar o código')
+                campo_mfa.click()
+                sleep(0.5)
+                # Dando Ctrl + v para colar o código copiado
+                pyautogui.hotkey('ctrl', 'v')
+                sleep(0.5)
+                
+            else:
+                retorno.processo = False
+                return retorno
+            
+            btn_entrar = check_exists_by_id(self.driver, 'btEntrar', ativo=True)
+            if btn_entrar:
+                log.info('Acessando o portal')
+                btn_entrar.click()
+            else:
+                retorno.processo = False
+                return retorno 
+                
+            
             errologin = check_exists_by_class(self.driver, 'message.messageLogin.error', ativo=True)
             if errologin:
                 log.info(f'Erro de login encontrado: {errologin.text}')
@@ -93,10 +136,50 @@ class C6():
                     return retorno
                     
             else:
-                sleep(3)
+                '''#AQUI COMEÇAMOS A TRATAR O OKTA VERIFY
+                #CLICANDO NO BOTÃO "DIGITE O SEU CÓDIGO"
+                clique_codigo = check_exists_by_xpath(self.driver, '/html/body/div[2]/div/main/div[2]/div/div/form[2]/div/div[2]/a')
+                if clique_codigo:
+                    log.info('Clicando no botão de digite o código')
+                    clique_codigo.click()
+                    sleep(0.5)
+            
+                else:
+                    sleep(3)
+                    log.info('Erro ao clicar em Verificar Código de login')
+                    retorno.processo = False
+                    return retorno
+                #CLICANDO NO CAMPO PARA DIGITAR O CÓDIGO
+                campo_codigo = check_exists_by_xpath(self.driver, '/html/body/div[2]/div/main/div[2]/div/div/form[2]/div/div[2]/div[2]/div[2]/span/input')
+                if campo_codigo:
+                    log.info('Abrindo aplicativo OKTA para pegar o código')     
+                    pyautogui.press("win")
+                    pyautogui.write("Okta")
+                    pyautogui.press("backspace")
+                    pyautogui.press('enter')
+                    sleep(12)
+                    pyautogui.doubleClick(x=97, y=135)
+                    pyautogui.click(x=193, y=17)
+                    #CLIANDO NO CAMPO DE DIGITAR O CÓDIGO 
+                    log.info('Clicando no campo de digitar o código')
+                    campo_codigo.click()
+                    sleep(0.5)
+                    # Dando Ctrl + v para colar o código copiado
+                    pyautogui.hotkey('ctrl', 'v')
+                    
+                btn_verificar = check_exists_by_xpath(self.driver, '/html/body/div[2]/div/main/div[2]/div/div/form[2]/div/div[2]/a')
+                if btn_verificar:
+                    log.info('Clicando no botão verificar')
+                    btn_verificar.click()
+                    sleep(0.5)
+                
+                else:
+                    retorno.processo = True
+                    return retorno '''
+                    
+                    
                 log.info(f'Não encontrado erro de login')
                 self.driver.get('https://gracco.corp.c6bank.com/gestao-processos')
-                
                 log.info('Acessando o link: https://gracco.corp.c6bank.com/gestao-processos')
                 #Criado esse bloco para testar o carregamento da página. Enquanto estiver carregando ele não sai do laço   
                 verifica_carregamento(self.driver)

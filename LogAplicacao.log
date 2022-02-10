@@ -5439,3 +5439,135 @@ Larissa De Matos Silva  (Finch - ADM)
 2022-02-02 10:22:26,220:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
 2022-02-02 10:22:27,248:--C6--:Preenchendo login
 2022-02-02 10:22:41,041:--C6--:Preenchendo a senha
+2022-02-09 23:01:02,894:--C6--:Iniciando o método de login no portal
+2022-02-09 23:01:04,680:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-09 23:01:05,702:--C6--:Preenchendo login
+2022-02-09 23:01:06,771:--C6--:Preenchendo a senha
+2022-02-09 23:01:07,866:--C6--:Acessando o portal
+2022-02-09 23:01:13,497:--C6--:Erro de login encontrado: Informe seu código de autenticação multifator (MFA).
+2022-02-09 23:01:16,513:--C6--:Não encontrado erro de login
+2022-02-09 23:01:17,454:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-09 23:01:22,492:--C6--:Carregamento de tela não localizado...
+2022-02-09 23:01:22,492:--C6--:Capturando o processo: 5010466-25.2021.8.24.0054
+2022-02-09 23:01:22,507:--C6--:Encontrado uma inconsistência no sistema...
+2022-02-09 23:01:22,507:--C6--:Tentativa de reestabelecimento de rotinas...
+2022-02-09 23:01:45,775:--C6--:Iniciando o método de login no portal
+2022-02-09 23:01:47,421:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-09 23:01:48,448:--C6--:Preenchendo login
+2022-02-09 23:01:49,500:--C6--:Preenchendo a senha
+2022-02-09 23:01:50,595:--C6--:Acessando o portal
+2022-02-09 23:01:54,719:--C6--:Erro de login encontrado: Informe seu código de autenticação multifator (MFA).
+2022-02-09 23:01:57,742:--C6--:Não encontrado erro de login
+2022-02-09 23:01:58,637:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-09 23:02:00,799:--C6--:Capturando o processo: 5010466-25.2021.8.24.0054
+2022-02-09 23:02:39,878:--C6--:Iniciando o método de login no portal
+2022-02-09 23:02:41,794:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-09 23:02:42,828:--C6--:Preenchendo login
+2022-02-09 23:02:43,876:--C6--:Preenchendo a senha
+2022-02-09 23:02:44,944:--C6--:Acessando o portal
+2022-02-09 23:02:51,107:--C6--:Erro de login encontrado: Informe seu código de autenticação multifator (MFA).
+2022-02-09 23:02:54,129:--C6--:Não encontrado erro de login
+2022-02-09 23:02:55,200:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-09 23:03:00,241:--C6--:Carregamento de tela não localizado...
+2022-02-09 23:03:00,241:--C6--:Capturando o processo: 5010466-25.2021.8.24.0054
+2022-02-09 23:03:00,256:--C6--:Encontrado uma inconsistência no sistema...
+2022-02-09 23:03:00,256:--C6--:Tentativa de reestabelecimento de rotinas...
+2022-02-09 23:19:02,554:--C6--:Iniciando o método de login no portal
+2022-02-09 23:19:04,276:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-09 23:19:05,305:--C6--:Preenchendo login
+2022-02-09 23:19:06,368:--C6--:Preenchendo a senha
+2022-02-09 23:19:42,483:--C6--:Acessando o portal
+2022-02-09 23:20:02,845:--C6--:Encontrado uma inconsistência no sistema...
+2022-02-09 23:20:03,416:--C6--:Tentativa de reestabelecimento de rotinas...
+2022-02-09 23:25:09,993:--C6--:Iniciando o método de login no portal
+2022-02-09 23:25:11,783:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-09 23:25:12,815:--C6--:Preenchendo login
+2022-02-09 23:25:13,880:--C6--:Preenchendo a senha
+2022-02-09 23:25:38,113:--C6--:Acessando o portal
+2022-02-09 23:25:50,111:--C6--:Encontrado uma inconsistência no sistema...
+2022-02-09 23:25:50,780:--C6--:Tentativa de reestabelecimento de rotinas...
+2022-02-09 23:28:03,298:--C6--:Iniciando o método de login no portal
+2022-02-09 23:28:04,992:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-09 23:28:06,029:--C6--:Preenchendo login
+2022-02-09 23:28:07,076:--C6--:Preenchendo a senha
+2022-02-09 23:28:21,920:--C6--:Acessando o portal
+2022-02-09 23:28:44,792:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-09 23:29:42,790:--C6--:Iniciando o método de login no portal
+2022-02-09 23:29:45,159:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-09 23:29:46,172:--C6--:Preenchendo login
+2022-02-09 23:29:47,238:--C6--:Preenchendo a senha
+2022-02-09 23:29:48,315:--C6--:Acessando o portal
+2022-02-09 23:29:55,585:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-09 23:30:08,418:--C6--:Clicando no campo de digitar o código
+2022-02-09 23:30:10,099:--C6--:Acessando o portal
+2022-02-09 23:30:37,830:--C6--:Iniciando o método de login no portal
+2022-02-09 23:30:39,451:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-09 23:30:40,488:--C6--:Preenchendo login
+2022-02-09 23:30:41,546:--C6--:Preenchendo a senha
+2022-02-09 23:30:42,622:--C6--:Acessando o portal
+2022-02-09 23:30:47,291:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-09 23:31:04,093:--C6--:Clicando no campo de digitar o código
+2022-02-09 23:31:05,762:--C6--:Acessando o portal
+2022-02-09 23:32:46,682:--C6--:Iniciando o método de login no portal
+2022-02-09 23:32:48,575:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-09 23:32:49,593:--C6--:Preenchendo login
+2022-02-09 23:32:50,656:--C6--:Preenchendo a senha
+2022-02-09 23:32:51,725:--C6--:Acessando o portal
+2022-02-09 23:32:57,319:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-09 23:33:14,120:--C6--:Clicando no campo de digitar o código
+2022-02-09 23:33:15,831:--C6--:Acessando o portal
+2022-02-09 23:33:24,475:--C6--:Não encontrado erro de login
+2022-02-09 23:33:25,818:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-09 23:33:30,818:--C6--:Carregamento de tela não localizado...
+2022-02-09 23:33:30,818:--C6--:Capturando o processo: 5010466-25.2021.8.24.0054
+2022-02-09 23:33:31,837:--C6--:Acessando a combo da pesquisa
+2022-02-09 23:33:32,972:--C6--:Preenchendo campo pesquisa
+2022-02-09 23:33:34,095:--C6--:Acessando botão de pesquisa
+2022-02-09 23:33:39,153:--C6--:Carregamento de tela não localizado...
+2022-02-09 23:33:46,252:--C6--:Clicando no número do processo
+2022-02-09 23:33:48,364:--C6--:Clicando em arquivos
+2022-02-09 23:33:50,269:--C6--:Clicando no mais para upload do documento
+2022-02-09 23:33:51,871:--C6--:Clicando em inserir arquivos
+2022-02-09 23:34:09,255:--C6--:Acessando botão de salvar
+2022-02-09 23:36:28,897:--C6--:Iniciando o método de login no portal
+2022-02-09 23:36:30,705:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-09 23:36:31,719:--C6--:Preenchendo login
+2022-02-09 23:36:32,780:--C6--:Preenchendo a senha
+2022-02-09 23:36:33,847:--C6--:Acessando o portal
+2022-02-09 23:36:39,414:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-09 23:36:59,293:--C6--:Clicando no campo de digitar o código
+2022-02-09 23:37:01,502:--C6--:Acessando o portal
+2022-02-09 23:37:10,507:--C6--:Não encontrado erro de login
+2022-02-09 23:37:11,953:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-09 23:37:16,968:--C6--:Carregamento de tela não localizado...
+2022-02-09 23:37:16,968:--C6--:Capturando o processo: 5010466-25.2021.8.24.0054
+2022-02-09 23:37:18,002:--C6--:Acessando a combo da pesquisa
+2022-02-09 23:37:19,127:--C6--:Preenchendo campo pesquisa
+2022-02-09 23:37:20,245:--C6--:Acessando botão de pesquisa
+2022-02-09 23:37:25,292:--C6--:Carregamento de tela não localizado...
+2022-02-09 23:37:32,395:--C6--:Clicando no número do processo
+2022-02-09 23:37:34,517:--C6--:Clicando em arquivos
+2022-02-09 23:37:36,408:--C6--:Clicando no mais para upload do documento
+2022-02-09 23:37:38,025:--C6--:Clicando em inserir arquivos
+2022-02-09 23:37:55,426:--C6--:Acessando botão de salvar
+2022-02-09 23:40:02,484:--C6--:Iniciando o método de login no portal
+2022-02-09 23:40:04,113:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-09 23:40:05,143:--C6--:Preenchendo login
+2022-02-09 23:40:06,204:--C6--:Preenchendo a senha
+2022-02-09 23:40:07,284:--C6--:Acessando o portal
+2022-02-09 23:40:12,632:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-09 23:40:32,509:--C6--:Clicando no campo de digitar o código
+2022-02-09 23:40:34,712:--C6--:Acessando o portal
+2022-02-09 23:40:43,628:--C6--:Não encontrado erro de login
+2022-02-09 23:40:44,757:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-09 23:40:49,811:--C6--:Carregamento de tela não localizado...
+2022-02-09 23:40:49,811:--C6--:Capturando o processo: 5010466-25.2021.8.24.0054
+2022-02-09 23:40:50,847:--C6--:Acessando a combo da pesquisa
+2022-02-09 23:40:51,965:--C6--:Preenchendo campo pesquisa
+2022-02-09 23:40:53,111:--C6--:Acessando botão de pesquisa
+2022-02-09 23:40:58,118:--C6--:Carregamento de tela não localizado...
+2022-02-09 23:41:05,229:--C6--:Clicando no número do processo
+2022-02-09 23:41:07,337:--C6--:Clicando em arquivos
+2022-02-09 23:41:09,285:--C6--:Clicando no mais para upload do documento
+2022-02-09 23:41:10,890:--C6--:Clicando em inserir arquivos
+2022-02-09 23:41:28,274:--C6--:Acessando botão de salvar
