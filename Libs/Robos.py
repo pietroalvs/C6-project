@@ -44,6 +44,7 @@ class C6():
         
         login_usuario = json.retorna_c6_login()
         senha_usuario = json.retorna_c6_senha()
+        
         log.info('Iniciando o método de login no portal')
         self.driver.maximize_window()
         self.driver.get(url_portal)
@@ -112,8 +113,10 @@ class C6():
             else:
                 retorno.processo = False
                 return retorno 
-                
             
+            #VERIFIANCO SE O PORTAL CONSEGUIU LOGAR CORRETAMENTE, CASO CONTRARIO SUBIR O LAÇO
+            sem_conexao = check_exists_by_id(self.driver, 'reload-button', ativo=True)    
+            login = check_exists_by_id(self.driver, 'login', ativo=True)  
             errologin = check_exists_by_class(self.driver, 'message.messageLogin.error', ativo=True)
             if errologin:
                 log.info(f'Erro de login encontrado: {errologin.text}')
@@ -134,50 +137,22 @@ class C6():
                     #aqui vai o return true. 
                     retorno.processo = True
                     return retorno
-                    
-            else:
-                '''#AQUI COMEÇAMOS A TRATAR O OKTA VERIFY
-                #CLICANDO NO BOTÃO "DIGITE O SEU CÓDIGO"
-                clique_codigo = check_exists_by_xpath(self.driver, '/html/body/div[2]/div/main/div[2]/div/div/form[2]/div/div[2]/a')
-                if clique_codigo:
-                    log.info('Clicando no botão de digite o código')
-                    clique_codigo.click()
-                    sleep(0.5)
-            
-                else:
-                    sleep(3)
-                    log.info('Erro ao clicar em Verificar Código de login')
-                    retorno.processo = False
-                    return retorno
-                #CLICANDO NO CAMPO PARA DIGITAR O CÓDIGO
-                campo_codigo = check_exists_by_xpath(self.driver, '/html/body/div[2]/div/main/div[2]/div/div/form[2]/div/div[2]/div[2]/div[2]/span/input')
-                if campo_codigo:
-                    log.info('Abrindo aplicativo OKTA para pegar o código')     
-                    pyautogui.press("win")
-                    pyautogui.write("Okta")
-                    pyautogui.press("backspace")
-                    pyautogui.press('enter')
-                    sleep(12)
-                    pyautogui.doubleClick(x=97, y=135)
-                    pyautogui.click(x=193, y=17)
-                    #CLIANDO NO CAMPO DE DIGITAR O CÓDIGO 
-                    log.info('Clicando no campo de digitar o código')
-                    campo_codigo.click()
-                    sleep(0.5)
-                    # Dando Ctrl + v para colar o código copiado
-                    pyautogui.hotkey('ctrl', 'v')
-                    
-                btn_verificar = check_exists_by_xpath(self.driver, '/html/body/div[2]/div/main/div[2]/div/div/form[2]/div/div[2]/a')
-                if btn_verificar:
-                    log.info('Clicando no botão verificar')
-                    btn_verificar.click()
-                    sleep(0.5)
+            #Verificando o ID de página não carregada, caso seja verdadeiro, aguardar e reiniciar laço    
+            elif sem_conexao:
+                #sleep(5)
+                self.driver.implicitly_wait(5)
+                log.info('Pagina sem conexão com a internet')
+                retorno.processo = False
+                return retorno
                 
-                else:
-                    retorno.processo = True
-                    return retorno '''
-                    
-                    
+            #Verificando se a página de login está carregada para recomeçar laço        
+            elif login:
+                log.info('Pagina de login encontrada, voltando laço para preencher login')
+                retorno.processo = False
+                return retorno 
+                
+                
+            else: 
                 log.info(f'Não encontrado erro de login')
                 self.driver.get('https://gracco.corp.c6bank.com/gestao-processos')
                 log.info('Acessando o link: https://gracco.corp.c6bank.com/gestao-processos')
@@ -549,6 +524,8 @@ class C6():
                             #Clicando em Enter para finalizar a abertura do arquivo
                             pyautogui.press('enter')
                             sleep(1)
+                            pyautogui.press('enter')
+                            sleep(1)
                 #Verificando se existe a palavra sentença no nome do arquivo, caso contenha, clicando em sentença            
                 if "SENTENÇA" in up.NomeArquivo:
                     combo_sentenca = check_exists_by_class(self.driver, '#previews > div.dz-preview.dz-file-preview > select')
@@ -565,21 +542,33 @@ class C6():
                     #sleep(2)
                          
             #Clicando no botão de salvar 
-                btn_salvar = check_exists_by_xpath(self.driver, '/html/body/div[2]/div[2]/div[3]/div[2]/div/div[1]/div/form/div[2]/div[1]/div')
-                if btn_salvar:
+                btn_salvar = check_exists_by_xpath(self.driver, '//*[@id="profileSalvar"]')
+                if btn_salvar: 
                     log.info('Acessando botão de salvar')
+                    pyautogui.press('pageup')
+                    sleep(1)
+                    pyautogui.press('pageup')
+                    sleep(0.5)
                     btn_salvar.click()
-                    sleep(10)
-                        
-            #FECHANDO A ABA APÓS 
-                btn_fechar = check_exists_by_xpath(self.driver, '/html/body/div[2]/div[2]/div[2]/div/ul/li[2]/div[2]')
+                    sleep(1)
+                    
+            #FECHANDO A ABA APÓS CONSULTA DE PROCESSO
+                btn_fechar = check_exists_by_class(self.driver, 'abaFechar')
                 if btn_fechar:
                     log.info('Clicando em botão fechar')
+                    # FUNÇÃO CARREGAR ELEMENTO
+                    verifica_carregamento2(self.driver)
                     btn_fechar.click()
                     sleep(2)
                     
+
+                
                     
-                            
+                    
+  
+  
+  
+                              
 def verifica_carregamento(driver, debug=False):
     try:
         cont =0
@@ -740,6 +729,29 @@ def verifica_carregamento(driver, debug=False):
     except NoSuchElementException as erro:
         log.info(f'Carregamento de tela não localizado...')
         return False
+    
+#ATUALIZAÇÃO PIETRO   
+def verifica_carregamento2(driver, debug=False):
+    try:
+        spinner2 = driver.find_element_by_class_name('spinnerLoadingText')
+        if spinner2:
+            spinner2 = WebDriverWait(driver, 180).until(EC.presence_of_element_located((By.CLASS_NAME, 'spinnerLoadingText'))) 
+            if spinner2:
+                cont = 1
+                log.info('Aguardando o salvamento do arquivo')
+                while spinner2:
+                    sleep(1)
+                    log.info(f'Tempo aguardando ... {cont}')
+                    cont = cont + 1
+                    spinner2 = driver.find_element_by_class_name('spinnerLoadingText')
+                    sleep(0.3)
+                    if spinner2:
+                        spinner2 = WebDriverWait(driver, 180).until(EC.presence_of_element_located((By.CLASS_NAME, 'spinnerLoadingText')))
+
+    except NoSuchElementException as erro:
+        log.info(f'Carregamento de tela não localizado...')
+        return False
+#FIM ATUALIZAÇÃO PIETRO 
 
 def limpeza_campos(driver):
     log.info('Chamando a rotina de limpeza dos campos')
@@ -827,8 +839,7 @@ def verifica_inatividade(driver):
     else: 
         retorno.ativo = True
         return True
-    
-#! COMEÇO DE IMPLEMENTAÇÃO DO PROJETO - WESLLEY \ PIETRO - 26-01-2022
+
 
 
 
