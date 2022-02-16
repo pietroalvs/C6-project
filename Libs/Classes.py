@@ -25,9 +25,18 @@ class Upload(object):
 class Subsidio(object):
     def __init__(self):
         self.NumeroProcesso = ''
-        self.DataSubsidio =''
+        self.DataSubsidio = ''
         self.Status = ''
         self.Critica = ''
+        
+class C6_Upload_Fila(object):
+    def __init__(self):
+        self.numero_processo = ''
+        self.argumento = -1
+        self.data_criacao = None
+        self.status = 0
+        self.caminho_logico_arquivo = ''  
+        
     
 def para_dict(obj):
     # Se for um objeto, transforma num dict

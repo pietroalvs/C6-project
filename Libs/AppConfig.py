@@ -102,6 +102,12 @@ class appConfig():
 
     def retorna_c6_senha(self) -> str:
         return self.__data["C6"]["senha"]
+    
+    def retorna_c6_login2(self) -> str:
+        return self.__data["C6"]["login2"]
+    
+    def retorna_c6_senha2(self) -> str:
+        return self.__data["C6"]["senha2"]
 
     def retorna_mongodb_conexao(self) -> str:
         return self.__data["MongoDB"]["Conexao"]

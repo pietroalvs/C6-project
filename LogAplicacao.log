@@ -8561,3 +8561,444 @@ Larissa De Matos Silva  (Finch - ADM)
 2022-02-14 11:30:35,712:--C6--:Abrindo aplicativo OKTA para pegar o código
 2022-02-14 11:30:55,622:--C6--:Clicando no campo de digitar o código
 2022-02-14 11:30:57,825:--C6--:Acessando o portal
+2022-02-14 12:52:43,500:--C6--:Iniciando o método de login no portal
+2022-02-14 12:52:45,260:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 12:52:46,302:--C6--:Preenchendo login
+2022-02-14 12:52:47,374:--C6--:Preenchendo a senha
+2022-02-14 12:52:48,477:--C6--:Acessando o portal
+2022-02-14 12:52:52,000:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 12:53:11,859:--C6--:Clicando no campo de digitar o código
+2022-02-14 12:53:14,102:--C6--:Acessando o portal
+2022-02-14 12:53:37,075:--C6--:Pagina sem conexão com a internet
+2022-02-14 12:53:37,076:--C6--:Iniciando o método de login no portal
+2022-02-14 12:53:38,564:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 12:53:39,593:--C6--:Preenchendo login
+2022-02-14 12:53:40,664:--C6--:Preenchendo a senha
+2022-02-14 12:53:41,757:--C6--:Acessando o portal
+2022-02-14 12:53:46,693:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 12:54:06,560:--C6--:Clicando no campo de digitar o código
+2022-02-14 12:54:08,790:--C6--:Acessando o portal
+2022-02-14 12:54:27,745:--C6--:Não encontrado erro de login
+2022-02-14 12:54:28,992:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-14 12:54:34,024:--C6--:Carregamento de tela não localizado...
+2022-02-14 12:54:34,025:--C6--:Capturando o processo: 5010466-25.2021.8.24.0054
+2022-02-14 12:54:35,066:--C6--:Acessando a combo da pesquisa
+2022-02-14 12:54:36,200:--C6--:Preenchendo campo pesquisa
+2022-02-14 12:54:37,351:--C6--:Acessando botão de pesquisa
+2022-02-14 12:54:42,412:--C6--:Carregamento de tela não localizado...
+2022-02-14 12:54:49,517:--C6--:Clicando no número do processo
+2022-02-14 12:54:51,626:--C6--:Clicando em arquivos
+2022-02-14 12:54:53,562:--C6--:Clicando no mais para upload do documento
+2022-02-14 12:54:55,263:--C6--:Clicando em inserir arquivos
+2022-02-14 12:55:13,848:--C6--:Acessando botão de salvar
+2022-02-14 12:55:17,931:--C6--:Clicando em botão fechar
+2022-02-14 12:55:17,955:--C6--:Aguardando o salvamento do arquivo
+2022-02-14 12:55:18,961:--C6--:Tempo aguardando ... 1
+2022-02-14 12:55:20,299:--C6--:Tempo aguardando ... 2
+2022-02-14 12:55:21,622:--C6--:Tempo aguardando ... 3
+2022-02-14 12:55:22,947:--C6--:Tempo aguardando ... 4
+2022-02-14 12:55:24,284:--C6--:Tempo aguardando ... 5
+2022-02-14 12:55:25,617:--C6--:Tempo aguardando ... 6
+2022-02-14 12:55:26,944:--C6--:Tempo aguardando ... 7
+2022-02-14 12:55:28,284:--C6--:Tempo aguardando ... 8
+2022-02-14 12:55:33,329:--C6--:Carregamento de tela não localizado...
+2022-02-14 12:57:05,242:--C6--:Iniciando o método de login no portal
+2022-02-14 12:57:07,347:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 12:57:08,380:--C6--:Preenchendo login
+2022-02-14 12:57:09,443:--C6--:Preenchendo a senha
+2022-02-14 12:57:10,544:--C6--:Acessando o portal
+2022-02-14 12:57:13,873:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 12:57:33,739:--C6--:Clicando no campo de digitar o código
+2022-02-14 12:57:35,964:--C6--:Acessando o portal
+2022-02-14 12:57:47,114:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-14 12:57:47,122:--C6--:Contador é:2
+2022-02-14 12:57:47,122:--C6--:Tentando executar o login novamente...
+2022-02-14 12:57:47,123:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-14 12:57:57,128:--C6--:Iniciando o método de login no portal
+2022-02-14 12:57:58,247:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 12:57:59,280:--C6--:Preenchendo login
+2022-02-14 12:58:00,340:--C6--:Preenchendo a senha
+2022-02-14 12:58:01,425:--C6--:Acessando o portal
+2022-02-14 12:58:04,987:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 12:58:24,883:--C6--:Clicando no campo de digitar o código
+2022-02-14 12:58:27,102:--C6--:Acessando o portal
+2022-02-14 12:58:38,263:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-14 12:58:38,270:--C6--:Contador é:2
+2022-02-14 12:58:38,271:--C6--:Tentando executar o login novamente...
+2022-02-14 12:58:38,271:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-14 12:58:48,275:--C6--:Iniciando o método de login no portal
+2022-02-14 12:58:48,982:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 12:58:50,009:--C6--:Preenchendo login
+2022-02-14 12:58:51,078:--C6--:Preenchendo a senha
+2022-02-14 12:58:52,157:--C6--:Acessando o portal
+2022-02-14 13:06:05,420:--C6--:Iniciando o método de login no portal
+2022-02-14 13:06:07,271:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:06:08,300:--C6--:Preenchendo login
+2022-02-14 13:06:09,368:--C6--:Preenchendo a senha
+2022-02-14 13:06:10,472:--C6--:Acessando o portal
+2022-02-14 13:06:14,172:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:06:34,009:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:06:36,222:--C6--:Acessando o portal
+2022-02-14 13:06:58,986:--C6--:Pagina sem conexão com a internet
+2022-02-14 13:06:58,987:--C6--:Iniciando o método de login no portal
+2022-02-14 13:07:21,352:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:07:22,379:--C6--:Preenchendo login
+2022-02-14 13:07:23,450:--C6--:Preenchendo a senha
+2022-02-14 13:07:24,539:--C6--:Acessando o portal
+2022-02-14 13:07:28,297:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:07:48,150:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:07:50,460:--C6--:Acessando o portal
+2022-02-14 13:08:09,548:--C6--:Não encontrado erro de login
+2022-02-14 13:08:11,007:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-14 13:08:16,060:--C6--:Carregamento de tela não localizado...
+2022-02-14 13:08:16,061:--C6--:Capturando o processo: 5010466-25.2021.8.24.0054
+2022-02-14 13:08:17,088:--C6--:Acessando a combo da pesquisa
+2022-02-14 13:08:18,193:--C6--:Preenchendo campo pesquisa
+2022-02-14 13:08:19,296:--C6--:Acessando botão de pesquisa
+2022-02-14 13:08:24,350:--C6--:Carregamento de tela não localizado...
+2022-02-14 13:08:31,455:--C6--:Clicando no número do processo
+2022-02-14 13:08:33,543:--C6--:Clicando em arquivos
+2022-02-14 13:08:35,489:--C6--:Clicando no mais para upload do documento
+2022-02-14 13:08:37,109:--C6--:Clicando em inserir arquivos
+2022-02-14 13:08:55,641:--C6--:Acessando botão de salvar
+2022-02-14 13:08:59,701:--C6--:Clicando em botão fechar
+2022-02-14 13:08:59,723:--C6--:Aguardando o salvamento do arquivo
+2022-02-14 13:09:00,724:--C6--:Tempo aguardando ... 1
+2022-02-14 13:09:02,050:--C6--:Tempo aguardando ... 2
+2022-02-14 13:09:03,379:--C6--:Tempo aguardando ... 3
+2022-02-14 13:09:04,704:--C6--:Tempo aguardando ... 4
+2022-02-14 13:09:06,028:--C6--:Tempo aguardando ... 5
+2022-02-14 13:09:07,357:--C6--:Tempo aguardando ... 6
+2022-02-14 13:09:08,689:--C6--:Tempo aguardando ... 7
+2022-02-14 13:09:10,016:--C6--:Tempo aguardando ... 8
+2022-02-14 13:09:11,344:--C6--:Tempo aguardando ... 9
+2022-02-14 13:09:12,677:--C6--:Tempo aguardando ... 10
+2022-02-14 13:09:14,010:--C6--:Tempo aguardando ... 11
+2022-02-14 13:09:15,331:--C6--:Tempo aguardando ... 12
+2022-02-14 13:09:16,660:--C6--:Tempo aguardando ... 13
+2022-02-14 13:09:21,714:--C6--:Carregamento de tela não localizado...
+2022-02-14 13:10:06,709:--C6--:Iniciando o método de login no portal
+2022-02-14 13:10:08,358:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:10:09,414:--C6--:Preenchendo login
+2022-02-14 13:10:10,470:--C6--:Preenchendo a senha
+2022-02-14 13:10:11,563:--C6--:Acessando o portal
+2022-02-14 13:10:15,369:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:10:35,251:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:10:37,469:--C6--:Acessando o portal
+2022-02-14 13:11:00,238:--C6--:Pagina sem conexão com a internet
+2022-02-14 13:11:00,239:--C6--:Iniciando o método de login no portal
+2022-02-14 13:11:01,345:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:11:02,374:--C6--:Preenchendo login
+2022-02-14 13:11:03,429:--C6--:Preenchendo a senha
+2022-02-14 13:11:04,505:--C6--:Acessando o portal
+2022-02-14 13:11:07,699:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:11:27,531:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:11:29,735:--C6--:Acessando o portal
+2022-02-14 13:11:41,417:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-14 13:11:41,427:--C6--:Contador é:2
+2022-02-14 13:11:41,427:--C6--:Tentando executar o login novamente...
+2022-02-14 13:11:41,428:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-14 13:11:51,431:--C6--:Iniciando o método de login no portal
+2022-02-14 13:11:52,361:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:11:53,398:--C6--:Preenchendo login
+2022-02-14 13:11:54,446:--C6--:Preenchendo a senha
+2022-02-14 13:11:55,532:--C6--:Acessando o portal
+2022-02-14 13:16:53,917:--C6--:Iniciando o método de login no portal
+2022-02-14 13:16:55,875:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:16:56,905:--C6--:Preenchendo login
+2022-02-14 13:16:57,977:--C6--:Preenchendo a senha
+2022-02-14 13:16:59,087:--C6--:Acessando o portal
+2022-02-14 13:17:03,090:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:17:22,949:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:17:25,209:--C6--:Acessando o portal
+2022-02-14 13:17:36,380:--C6--:Contador é:2
+2022-02-14 13:17:36,396:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-14 13:17:36,403:--C6--:Tentando executar o login novamente...
+2022-02-14 13:17:36,404:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-14 13:17:46,419:--C6--:Iniciando o método de login no portal
+2022-02-14 13:17:47,247:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:17:48,269:--C6--:Preenchendo login
+2022-02-14 13:17:49,329:--C6--:Preenchendo a senha
+2022-02-14 13:17:50,416:--C6--:Acessando o portal
+2022-02-14 13:17:53,976:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:18:13,846:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:18:16,058:--C6--:Acessando o portal
+2022-02-14 13:18:48,116:--C6--:Contador é:2
+2022-02-14 13:18:48,129:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-14 13:18:48,136:--C6--:Tentando executar o login novamente...
+2022-02-14 13:18:48,137:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-14 13:18:58,142:--C6--:Iniciando o método de login no portal
+2022-02-14 13:18:58,917:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:18:59,950:--C6--:Preenchendo login
+2022-02-14 13:19:01,006:--C6--:Preenchendo a senha
+2022-02-14 13:19:02,090:--C6--:Acessando o portal
+2022-02-14 13:19:05,585:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:24:41,378:--C6--:Iniciando o método de login no portal
+2022-02-14 13:24:43,248:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:25:34,289:--C6--:Iniciando o método de login no portal
+2022-02-14 13:25:37,037:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:45:45,147:--C6--:Iniciando o método de login no portal
+2022-02-14 13:45:46,884:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:46:22,593:--C6--:Iniciando o método de login no portal
+2022-02-14 13:46:24,971:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:46:26,021:--C6--:Preenchendo login
+2022-02-14 13:46:26,021:--C6--:Contador é igual a:1
+2022-02-14 13:46:27,092:--C6--:Preenchendo a senha
+2022-02-14 13:46:28,193:--C6--:Acessando o portal
+2022-02-14 13:46:31,631:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:46:51,507:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:46:53,738:--C6--:Acessando o portal
+2022-02-14 13:47:05,346:--C6--:Contador é:2
+2022-02-14 13:47:05,366:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-14 13:47:05,376:--C6--:Tentando executar o login novamente...
+2022-02-14 13:47:05,377:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-14 13:47:15,393:--C6--:Iniciando o método de login no portal
+2022-02-14 13:47:16,164:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:47:17,190:--C6--:Preenchendo login
+2022-02-14 13:47:17,191:--C6--:Contador é igual a:1
+2022-02-14 13:47:18,251:--C6--:Preenchendo a senha
+2022-02-14 13:47:19,334:--C6--:Acessando o portal
+2022-02-14 13:47:23,512:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:47:43,343:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:47:45,581:--C6--:Acessando o portal
+2022-02-14 13:48:17,930:--C6--:Contador é:2
+2022-02-14 13:48:17,946:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-14 13:48:17,957:--C6--:Tentando executar o login novamente...
+2022-02-14 13:48:17,958:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-14 13:48:27,960:--C6--:Iniciando o método de login no portal
+2022-02-14 13:48:28,945:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:48:29,978:--C6--:Preenchendo login
+2022-02-14 13:48:29,978:--C6--:Contador é igual a:1
+2022-02-14 13:48:31,039:--C6--:Preenchendo a senha
+2022-02-14 13:48:32,128:--C6--:Acessando o portal
+2022-02-14 13:48:35,776:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:48:55,609:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:52:54,318:--C6--:Iniciando o método de login no portal
+2022-02-14 13:52:56,241:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:52:57,277:--C6--:Preenchendo login
+2022-02-14 13:52:57,277:--C6--:Contador é igual a:1
+2022-02-14 13:52:58,333:--C6--:Preenchendo a senha
+2022-02-14 13:52:59,435:--C6--:Acessando o portal
+2022-02-14 13:53:05,267:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:53:25,139:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:53:27,358:--C6--:Acessando o portal
+2022-02-14 13:53:47,772:--C6--:Pagina sem conexão com a internet
+2022-02-14 13:53:47,773:--C6--:Iniciando o método de login no portal
+2022-02-14 13:53:49,833:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:53:50,873:--C6--:Preenchendo login
+2022-02-14 13:53:50,873:--C6--:Contador é igual a:1
+2022-02-14 13:53:51,946:--C6--:Preenchendo a senha
+2022-02-14 13:53:53,037:--C6--:Acessando o portal
+2022-02-14 13:53:56,786:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:54:16,630:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:54:18,894:--C6--:Acessando o portal
+2022-02-14 13:54:39,881:--C6--:Não encontrado erro de login
+2022-02-14 13:54:42,206:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-14 13:54:47,270:--C6--:Carregamento de tela não localizado...
+2022-02-14 13:54:47,270:--C6--:Capturando o processo: 5010466-25.2021.8.24.0054
+2022-02-14 13:54:48,298:--C6--:Acessando a combo da pesquisa
+2022-02-14 13:54:49,406:--C6--:Preenchendo campo pesquisa
+2022-02-14 13:54:50,535:--C6--:Acessando botão de pesquisa
+2022-02-14 13:54:55,602:--C6--:Carregamento de tela não localizado...
+2022-02-14 13:55:02,717:--C6--:Clicando no número do processo
+2022-02-14 13:55:04,812:--C6--:Clicando em arquivos
+2022-02-14 13:55:06,750:--C6--:Clicando no mais para upload do documento
+2022-02-14 13:55:08,364:--C6--:Clicando em inserir arquivos
+2022-02-14 13:55:26,921:--C6--:Acessando botão de salvar
+2022-02-14 13:55:31,310:--C6--:Clicando em botão fechar
+2022-02-14 13:55:31,334:--C6--:Aguardando o salvamento do arquivo
+2022-02-14 13:55:32,349:--C6--:Tempo aguardando ... 1
+2022-02-14 13:55:33,679:--C6--:Tempo aguardando ... 2
+2022-02-14 13:55:35,016:--C6--:Tempo aguardando ... 3
+2022-02-14 13:55:36,354:--C6--:Tempo aguardando ... 4
+2022-02-14 13:55:37,688:--C6--:Tempo aguardando ... 5
+2022-02-14 13:55:39,014:--C6--:Tempo aguardando ... 6
+2022-02-14 13:55:40,343:--C6--:Tempo aguardando ... 7
+2022-02-14 13:55:41,669:--C6--:Tempo aguardando ... 8
+2022-02-14 13:55:43,005:--C6--:Tempo aguardando ... 9
+2022-02-14 13:55:44,338:--C6--:Tempo aguardando ... 10
+2022-02-14 13:55:45,677:--C6--:Tempo aguardando ... 11
+2022-02-14 13:55:47,001:--C6--:Tempo aguardando ... 12
+2022-02-14 13:55:48,328:--C6--:Tempo aguardando ... 13
+2022-02-14 13:55:49,659:--C6--:Tempo aguardando ... 14
+2022-02-14 13:55:50,988:--C6--:Tempo aguardando ... 15
+2022-02-14 13:55:52,316:--C6--:Tempo aguardando ... 16
+2022-02-14 13:55:53,644:--C6--:Tempo aguardando ... 17
+2022-02-14 13:55:54,970:--C6--:Tempo aguardando ... 18
+2022-02-14 13:56:00,024:--C6--:Carregamento de tela não localizado...
+2022-02-14 13:57:58,774:--C6--:Iniciando o método de login no portal
+2022-02-14 13:58:00,530:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:58:01,556:--C6--:Preenchendo login
+2022-02-14 13:58:01,556:--C6--:Contador é igual a:1
+2022-02-14 13:58:02,614:--C6--:Preenchendo a senha
+2022-02-14 13:58:03,700:--C6--:Acessando o portal
+2022-02-14 13:58:07,289:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:58:27,135:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:58:29,347:--C6--:Acessando o portal
+2022-02-14 13:58:52,255:--C6--:Pagina sem conexão com a internet
+2022-02-14 13:58:52,255:--C6--:Iniciando o método de login no portal
+2022-02-14 13:58:53,680:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:58:54,711:--C6--:Preenchendo login
+2022-02-14 13:58:54,712:--C6--:Contador é igual a:1
+2022-02-14 13:58:55,778:--C6--:Preenchendo a senha
+2022-02-14 13:58:56,865:--C6--:Acessando o portal
+2022-02-14 13:59:00,838:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 13:59:20,736:--C6--:Clicando no campo de digitar o código
+2022-02-14 13:59:22,956:--C6--:Acessando o portal
+2022-02-14 13:59:35,161:--C6--:Contador é:2
+2022-02-14 13:59:35,178:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-14 13:59:35,184:--C6--:Tentando executar o login novamente...
+2022-02-14 13:59:35,185:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-14 13:59:45,190:--C6--:Iniciando o método de login no portal
+2022-02-14 13:59:46,690:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 13:59:47,725:--C6--:Preenchendo login
+2022-02-14 13:59:48,790:--C6--:Preenchendo a senha
+2022-02-14 13:59:49,892:--C6--:Acessando o portal
+2022-02-14 13:59:54,080:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 14:00:13,944:--C6--:Clicando no campo de digitar o código
+2022-02-14 14:00:16,149:--C6--:Acessando o portal
+2022-02-14 14:00:27,324:--C6--:Contador é:3
+2022-02-14 14:00:27,341:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-14 14:00:27,351:--C6--:Tentando executar o login novamente...
+2022-02-14 14:00:27,351:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-14 14:00:37,356:--C6--:Iniciando o método de login no portal
+2022-02-14 14:00:38,215:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 14:00:39,252:--C6--:Preenchendo login
+2022-02-14 14:00:39,253:--C6--:Contador é igual a:3
+2022-02-14 14:00:40,323:--C6--:Preenchendo a senha
+2022-02-14 14:00:41,411:--C6--:Acessando o portal
+2022-02-14 14:00:45,229:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 14:01:05,078:--C6--:Clicando no campo de digitar o código
+2022-02-14 14:01:07,278:--C6--:Acessando o portal
+2022-02-14 14:01:18,564:--C6--:Contador é:4
+2022-02-14 14:01:18,578:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-14 14:01:18,586:--C6--:Tentando executar o login novamente...
+2022-02-14 14:01:18,587:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-14 14:01:28,597:--C6--:Iniciando o método de login no portal
+2022-02-14 14:01:29,396:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 14:01:30,436:--C6--:Preenchendo login
+2022-02-14 14:01:31,505:--C6--:Preenchendo a senha
+2022-02-14 14:01:32,608:--C6--:Acessando o portal
+2022-02-14 14:01:36,883:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 14:01:56,721:--C6--:Clicando no campo de digitar o código
+2022-02-14 14:01:58,935:--C6--:Acessando o portal
+2022-02-14 14:02:09,857:--C6--:Contador é:5
+2022-02-14 14:02:09,870:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-14 14:02:09,877:--C6--:Tentando executar o login novamente...
+2022-02-14 14:02:09,877:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-14 14:02:19,889:--C6--:Iniciando o método de login no portal
+2022-02-14 14:02:20,906:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 14:02:21,940:--C6--:Preenchendo login
+2022-02-14 14:02:21,941:--C6--:Contador é igual a:5
+2022-02-14 14:02:23,007:--C6--:Preenchendo a senha
+2022-02-14 14:02:24,093:--C6--:Acessando o portal
+2022-02-14 14:02:27,911:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-14 14:02:47,763:--C6--:Clicando no campo de digitar o código
+2022-02-14 14:02:49,960:--C6--:Acessando o portal
+2022-02-14 14:03:01,119:--C6--:Contador é:6
+2022-02-14 14:03:01,136:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-14 14:03:01,146:--C6--:Tentando executar o login novamente...
+2022-02-14 14:03:01,147:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-14 14:03:11,157:--C6--:Iniciando o método de login no portal
+2022-02-14 14:03:11,934:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-14 14:03:12,967:--C6--:Preenchendo login
+2022-02-14 14:03:14,038:--C6--:Preenchendo a senha
+2022-02-14 14:03:15,141:--C6--:Acessando o portal
+2022-02-14 14:03:18,583:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-15 08:49:58,470:--C6--:Iniciando o método de login no portal
+2022-02-15 08:50:00,390:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-15 08:50:01,441:--C6--:Preenchendo login
+2022-02-15 08:50:01,442:--C6--:Contador é igual a:1
+2022-02-15 08:50:02,509:--C6--:Preenchendo a senha
+2022-02-15 08:50:03,606:--C6--:Acessando o portal
+2022-02-15 08:50:07,479:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-15 08:50:27,397:--C6--:Clicando no campo de digitar o código
+2022-02-15 08:50:29,626:--C6--:Acessando o portal
+2022-02-15 08:50:48,585:--C6--:Não encontrado erro de login
+2022-02-15 08:50:50,225:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-15 08:50:55,261:--C6--:Carregamento de tela não localizado...
+2022-02-15 08:50:55,262:--C6--:Capturando o processo: 5010466-25.2021.8.24.0054
+2022-02-15 08:50:56,298:--C6--:Acessando a combo da pesquisa
+2022-02-15 08:50:57,455:--C6--:Preenchendo campo pesquisa
+2022-02-15 08:50:58,620:--C6--:Acessando botão de pesquisa
+2022-02-15 08:51:03,628:--C6--:Carregamento de tela não localizado...
+2022-02-15 08:51:10,730:--C6--:Clicando no número do processo
+2022-02-15 08:51:12,835:--C6--:Clicando em arquivos
+2022-02-15 08:51:14,774:--C6--:Clicando no mais para upload do documento
+2022-02-15 08:51:16,455:--C6--:Clicando em inserir arquivos
+2022-02-15 08:51:35,049:--C6--:Acessando botão de salvar
+2022-02-15 08:51:39,116:--C6--:Clicando em botão fechar
+2022-02-15 08:51:39,134:--C6--:Aguardando o salvamento do arquivo
+2022-02-15 08:51:40,138:--C6--:Tempo aguardando ... 1
+2022-02-15 08:51:41,464:--C6--:Tempo aguardando ... 2
+2022-02-15 08:51:42,788:--C6--:Tempo aguardando ... 3
+2022-02-15 08:51:44,124:--C6--:Tempo aguardando ... 4
+2022-02-15 08:51:45,445:--C6--:Tempo aguardando ... 5
+2022-02-15 08:51:46,782:--C6--:Tempo aguardando ... 6
+2022-02-15 08:51:48,117:--C6--:Tempo aguardando ... 7
+2022-02-15 08:51:49,444:--C6--:Tempo aguardando ... 8
+2022-02-15 08:51:50,790:--C6--:Tempo aguardando ... 9
+2022-02-15 08:51:52,137:--C6--:Tempo aguardando ... 10
+2022-02-15 08:51:53,474:--C6--:Tempo aguardando ... 11
+2022-02-15 08:51:54,816:--C6--:Tempo aguardando ... 12
+2022-02-15 08:51:56,157:--C6--:Tempo aguardando ... 13
+2022-02-15 08:51:57,499:--C6--:Tempo aguardando ... 14
+2022-02-15 08:51:58,840:--C6--:Tempo aguardando ... 15
+2022-02-15 08:52:00,183:--C6--:Tempo aguardando ... 16
+2022-02-15 08:54:46,398:--C6--:Iniciando o método de login no portal
+2022-02-15 08:54:48,092:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-15 08:54:49,121:--C6--:Preenchendo login
+2022-02-15 08:54:49,122:--C6--:Contador é igual a:1
+2022-02-15 08:54:50,201:--C6--:Preenchendo a senha
+2022-02-15 08:54:51,295:--C6--:Acessando o portal
+2022-02-15 08:54:56,651:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-15 08:55:16,565:--C6--:Clicando no campo de digitar o código
+2022-02-15 08:55:18,831:--C6--:Acessando o portal
+2022-02-15 08:55:30,888:--C6--:Contador é:2
+2022-02-15 08:55:30,904:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
+2022-02-15 08:55:30,911:--C6--:Tentando executar o login novamente...
+2022-02-15 08:55:30,911:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-15 08:55:40,927:--C6--:Iniciando o método de login no portal
+2022-02-15 08:55:41,741:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-15 08:55:42,779:--C6--:Preenchendo login
+2022-02-15 08:55:43,850:--C6--:Preenchendo a senha
+2022-02-15 08:55:44,951:--C6--:Acessando o portal
+2022-02-15 08:55:52,504:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-15 08:56:12,437:--C6--:Clicando no campo de digitar o código
+2022-02-15 08:56:14,663:--C6--:Acessando o portal
+2022-02-15 08:56:33,829:--C6--:Não encontrado erro de login
+2022-02-15 08:56:35,068:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-15 08:56:40,098:--C6--:Carregamento de tela não localizado...
+2022-02-15 08:56:40,099:--C6--:Capturando o processo: 5010466-25.2021.8.24.0054
+2022-02-15 08:56:41,141:--C6--:Acessando a combo da pesquisa
+2022-02-15 08:56:42,278:--C6--:Preenchendo campo pesquisa
+2022-02-15 08:56:43,442:--C6--:Acessando botão de pesquisa
+2022-02-15 08:56:48,477:--C6--:Carregamento de tela não localizado...
+2022-02-15 08:56:55,581:--C6--:Clicando no número do processo
+2022-02-15 08:56:57,677:--C6--:Clicando em arquivos
+2022-02-15 08:56:59,603:--C6--:Clicando no mais para upload do documento
+2022-02-15 08:57:01,296:--C6--:Clicando em inserir arquivos
+2022-02-15 08:57:19,883:--C6--:Acessando botão de salvar
+2022-02-15 08:57:24,197:--C6--:Clicando em botão fechar
+2022-02-15 08:57:24,219:--C6--:Aguardando o salvamento do arquivo
+2022-02-15 08:57:25,227:--C6--:Tempo aguardando ... 1
+2022-02-15 08:57:26,545:--C6--:Tempo aguardando ... 2
+2022-02-15 08:57:27,887:--C6--:Tempo aguardando ... 3
+2022-02-15 08:57:29,220:--C6--:Tempo aguardando ... 4
+2022-02-15 08:57:30,563:--C6--:Tempo aguardando ... 5
+2022-02-15 08:57:31,897:--C6--:Tempo aguardando ... 6
+2022-02-15 08:57:33,233:--C6--:Tempo aguardando ... 7
+2022-02-15 08:57:34,559:--C6--:Tempo aguardando ... 8
+2022-02-15 08:57:35,892:--C6--:Tempo aguardando ... 9
+2022-02-15 08:57:37,232:--C6--:Tempo aguardando ... 10
+2022-02-15 08:57:38,564:--C6--:Tempo aguardando ... 11
+2022-02-15 08:57:39,891:--C6--:Tempo aguardando ... 12
+2022-02-15 08:57:41,229:--C6--:Tempo aguardando ... 13
+2022-02-15 08:57:42,555:--C6--:Tempo aguardando ... 14
+2022-02-15 08:57:43,891:--C6--:Tempo aguardando ... 15
+2022-02-15 10:40:05,445:--C6--:Iniciando o método de login no portal
+2022-02-15 10:40:07,229:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-15 10:40:08,257:--C6--:Preenchendo login
+2022-02-15 10:40:08,257:--C6--:Contador é igual a:1
+2022-02-15 10:40:09,331:--C6--:Preenchendo a senha
+2022-02-15 10:40:10,469:--C6--:Acessando o portal
