@@ -17,7 +17,7 @@ from datetime import date
 import datetime as dt
 import clipboard as c
 import pyautogui
-#from workday import workday as wd
+from workdays import workday as wd
 
 log = Logs.RetornaLog("--C6--")
 json = appConfig()
@@ -41,7 +41,9 @@ class C6():
         chrome_options.add_argument('--disable-software-rasterizer')
         
      
-        self.driver = webdriver.Chrome('./chromedriver', chrome_options=chrome_options)        
+        self.driver = webdriver.Chrome('./chromedriver', chrome_options=chrome_options)
+        
+    
     def login_portal(self)-> Retorno_Inatividade:
         
         login_usuario = json.retorna_c6_login()
@@ -49,142 +51,143 @@ class C6():
         login_usuario2 = json.retorna_c6_login2()
         senha_usuario2 = json.retorna_c6_senha2()
         
-        contador = 1
-        portal_logou = True
-        while portal_logou:
-            log.info('Iniciando o método de login no portal')
-            self.driver.maximize_window()
-            self.driver.get(url_portal)
-            self.driver.implicitly_wait(5)
+        #contador = 1
+        #portal_logou = True
+        #while portal_logou:   
+            
+        log.info('Iniciando o método de login no portal')
+        self.driver.maximize_window()
+        self.driver.get(url_portal)
+        self.driver.implicitly_wait(5)
 
-            log.info(f'Navegando para: {url_portal}')
+        log.info(f'Navegando para: {url_portal}')
         
-            login = check_exists_by_id(self.driver, 'login', ativo=True)
-            if login:
-                if (contador%2) == 1:
-                    log.info('Preenchendo login')
-                    log.info(f'Contador é igual a:{contador}')
-                    login.send_keys(login_usuario)
-                else:
-                    log.info('Preenchendo login')
-                    login.send_keys(login_usuario2)
+        login = check_exists_by_id(self.driver, 'login', ativo=True)
+        if login:
+            #if (contador%2) == 1:
+            log.info('Preenchendo login')
+            #log.info(f'Contador é igual a:{contador}')
+            login.send_keys(login_usuario)
+            #else:
+            #log.info('Preenchendo login')
+            #login.send_keys(login_usuario2)
+        else:
+            retorno.processo = False
+            return retorno
+        
+        senha = check_exists_by_id(self.driver, 'passw', ativo=True)
+        if senha:
+            #if (contador%2) == 1:
+            log.info('Preenchendo a senha')
+            senha.send_keys(senha_usuario)
+            #else:
+            #log.info('Preenchendo a senha')
+            #senha.send_keys(senha_usuario2)
+        else:
+            retorno.processo = False
+            return retorno
+        
+        btn_entrar = check_exists_by_id(self.driver, 'btEntrar', ativo=True)
+        if btn_entrar:
+            log.info('Acessando o portal')
+            btn_entrar.click()
+            
+            #INICIANDO VERIFICAÇÃO DO MFA
+            campo_mfa = check_exists_by_id(self.driver, 'mfaPassCode', ativo=True)
+            if campo_mfa:
+                log.info('Abrindo aplicativo OKTA para pegar o código')     
+                pyautogui.press("win")
+                sleep(0.5)
+                pyautogui.write("Okta")
+                sleep(0.5)
+                pyautogui.press("backspace")
+                sleep(0.5)
+                pyautogui.press('enter')
+                sleep(16)
+                #if (contador%2) == 1: #Dando duplo clique para copiar o código
+                pyautogui.doubleClick(x=97, y=135)
+                sleep(0.5)
+                #else:
+                    #pyautogui.doubleClick(x=90, y=214) #Clicando no segundo login disponível
+                    #sleep(0.5)
+                #Clicando no X para fechar
+                pyautogui.click(x=193, y=17)
+                sleep(0.5)
+                #Clicando em confirmar fechamento
+                pyautogui.click(x=276, y=239)
+                sleep(0.5)
+                #CLIANDO NO CAMPO DE DIGITAR O CÓDIGO 
+                log.info('Clicando no campo de digitar o código')
+                campo_mfa.click()
+                sleep(0.5)
+                # Dando Ctrl + v para colar o código copiado
+                pyautogui.hotkey('ctrl', 'v')
+                sleep(0.5)
+                
             else:
                 retorno.processo = False
                 return retorno
-        
-            senha = check_exists_by_id(self.driver, 'passw', ativo=True)
-            if senha:
-                if (contador%2) == 1:
-                    log.info('Preenchendo a senha')
-                    senha.send_keys(senha_usuario)
-                else:
-                    log.info('Preenchendo a senha')
-                    senha.send_keys(senha_usuario2)
-            else:
-                retorno.processo = False
-                return retorno
-        
+            
             btn_entrar = check_exists_by_id(self.driver, 'btEntrar', ativo=True)
             if btn_entrar:
                 log.info('Acessando o portal')
                 btn_entrar.click()
-            
-                #INICIANDO VERIFICAÇÃO DO MFA
-                campo_mfa = check_exists_by_id(self.driver, 'mfaPassCode', ativo=True)
-                if campo_mfa:
-                    log.info('Abrindo aplicativo OKTA para pegar o código')     
-                    pyautogui.press("win")
-                    sleep(0.5)
-                    pyautogui.write("Okta")
-                    sleep(0.5)
-                    pyautogui.press("backspace")
-                    sleep(0.5)
-                    pyautogui.press('enter')
-                    sleep(16)
-                    if (contador%2) == 1: #Dando duplo clique para copiar o código
-                        pyautogui.doubleClick(x=97, y=135)
-                        sleep(0.5)
-                    else:
-                        pyautogui.doubleClick(x=90, y=214) #Clicando no segundo login disponível
-                        sleep(0.5)
-                    #Clicando no X para fechar
-                    pyautogui.click(x=193, y=17)
-                    sleep(0.5)
-                    #Clicando em confirmar fechamento
-                    pyautogui.click(x=276, y=239)
-                    sleep(0.5)
-                    #CLIANDO NO CAMPO DE DIGITAR O CÓDIGO 
-                    log.info('Clicando no campo de digitar o código')
-                    campo_mfa.click()
-                    sleep(0.5)
-                    # Dando Ctrl + v para colar o código copiado
-                    pyautogui.hotkey('ctrl', 'v')
-                    sleep(0.5)
-                
-                else:
-                    retorno.processo = False
-                    return retorno
-            
-                btn_entrar = check_exists_by_id(self.driver, 'btEntrar', ativo=True)
-                if btn_entrar:
-                    log.info('Acessando o portal')
-                    btn_entrar.click()
-                else:
-                    retorno.processo = False
-                    return retorno 
-            
-                #VERIFIANCO SE O PORTAL CONSEGUIU LOGAR CORRETAMENTE, CASO CONTRARIO SUBIR O LAÇO
-                sem_conexao = check_exists_by_id(self.driver, 'reload-button', ativo=True)    
-                login = check_exists_by_id(self.driver, 'login', ativo=True)  
-                errologin = check_exists_by_class(self.driver, 'message.messageLogin.error', ativo=True)
-                if errologin:
-                    contador = contador + 1
-                    log.info(f'Contador é:{contador}')
-                    log.info(f'Erro de login encontrado: {errologin.text}')
-                    if errologin.text.startswith("Usuário logado na estação"):
-                        log.info('Tentando executar o login novamente...')
-                        log.info('Aguardando 10 segundos para tentar novamente...')
-                        sleep(10)
-                        #retorno.processo = False
-                        #return retorno
-                    else:
-                        sleep(3)
-                        log.info(f'Não encontrado erro de login')
-                        self.driver.get('https://gracco.corp.c6bank.com/gestao-processos')
-                    
-                        log.info('Acessando o link: https://gracco.corp.c6bank.com/gestao-processos')
-                        #Criado esse bloco para testar o carregamento da página. Enquanto estiver carregando ele não sai do laço   
-                        verifica_carregamento(self.driver)
-                        #aqui vai o return true. 
-                        retorno.processo = True
-                        return retorno
-                #Verificando o ID de página não carregada, caso seja verdadeiro, aguardar e reiniciar laço    
-                elif sem_conexao:
-                    #sleep(5)
-                    self.driver.implicitly_wait(5)
-                    log.info('Pagina sem conexão com a internet')
-                    retorno.processo = False
-                    return retorno
-                
-                #Verificando se a página de login está carregada para recomeçar laço        
-                elif login:
-                    log.info('Pagina de login encontrada, voltando laço para preencher login')
-                    retorno.processo = False
-                    return retorno 
-                
-                
-                else:
-                    portal_logou = False
-                    log.info(f'Não encontrado erro de login')
-                    self.driver.get('https://gracco.corp.c6bank.com/gestao-processos')
-                    log.info('Acessando o link: https://gracco.corp.c6bank.com/gestao-processos')
-                    #Criado esse bloco para testar o carregamento da página. Enquanto estiver carregando ele não sai do laço   
-                    verifica_carregamento(self.driver)
-                    retorno.processo = True
-                    return retorno       
             else:
                 retorno.processo = False
                 return retorno 
+            
+            #VERIFIANCO SE O PORTAL CONSEGUIU LOGAR CORRETAMENTE, CASO CONTRARIO SUBIR O LAÇO
+            sem_conexao = check_exists_by_id(self.driver, 'reload-button', ativo=True)    
+            login = check_exists_by_id(self.driver, 'login', ativo=True)  
+            errologin = check_exists_by_class(self.driver, 'message.messageLogin.error', ativo=True)
+            if errologin:
+                #contador = contador + 1
+                #log.info(f'Contador é:{contador}')
+                log.info(f'Erro de login encontrado: {errologin.text}')
+                if errologin.text.startswith("Usuário logado na estação"):
+                    log.info('Tentando executar o login novamente...')
+                    log.info('Aguardando 10 segundos para tentar novamente...')
+                    sleep(10)
+                    #retorno.processo = False
+                    #return retorno
+                else:
+                    sleep(3)
+                    log.info(f'Não encontrado erro de login')
+                    self.driver.get('https://gracco.corp.c6bank.com/gestao-processos')
+                    
+                    log.info('Acessando o link: https://gracco.corp.c6bank.com/gestao-processos')
+                        #Criado esse bloco para testar o carregamento da página. Enquanto estiver carregando ele não sai do laço   
+                    verifica_carregamento(self.driver)
+                    #aqui vai o return true. 
+                    retorno.processo = True
+                    return retorno
+            #Verificando o ID de página não carregada, caso seja verdadeiro, aguardar e reiniciar laço    
+            elif sem_conexao:
+                #sleep(5)
+                self.driver.implicitly_wait(5)
+                log.info('Pagina sem conexão com a internet')
+                retorno.processo = False
+                return retorno
+                
+            #Verificando se a página de login está carregada para recomeçar laço        
+            elif login:
+                log.info('Pagina de login encontrada, voltando laço para preencher login')
+                retorno.processo = False
+                return retorno 
+                
+                
+            else:
+                #portal_logou = False
+                log.info(f'Não encontrado erro de login')
+                self.driver.get('https://gracco.corp.c6bank.com/gestao-processos')
+                log.info('Acessando o link: https://gracco.corp.c6bank.com/gestao-processos')
+                #Criado esse bloco para testar o carregamento da página. Enquanto estiver carregando ele não sai do laço   
+                verifica_carregamento(self.driver)
+                retorno.processo = True
+                return retorno       
+        else:
+            retorno.processo = False
+            return retorno 
     def consulta_processo_aceite(self, Processo:Aceite)-> Retorno_Inatividade:
         try:
             aceite_encontrado = False
@@ -338,6 +341,8 @@ class C6():
             retorno.processo = False
             log.info('Inconsistência no sistema...')
             return retorno 
+        
+        
     def lancamento_processo_subsidio(self, Processo:Subsidio)-> bool:
         try: 
             a = Subsidio()
@@ -450,7 +455,7 @@ class C6():
             return retorno
     def lancamento_copias(self, Processo:C6_Upload_Fila)-> bool:
         
-            #criando o objeto upload e passando os valores que vieram da fila para esse objeto.
+        #criando o objeto upload e passando os valores que vieram da fila para esse objeto.
             up = C6_Upload_Fila()
             up.numero_processo = Processo.numero_processo
             up.caminho_logico_arquivo = Processo.caminho_logico_arquivo
