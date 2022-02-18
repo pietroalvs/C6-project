@@ -4,6 +4,7 @@ from os import listdir
 from os.path import basename, isfile, join
 import pathlib
 from Libs.Logs import Logs
+from datetime import *
 
 log = Logs.RetornaLog("--Utilitários--")
 
@@ -37,3 +38,13 @@ class Uteis():
             log.info(f"Movendo arquivo de: {path_origem} para: {path_destino}.")
             shutil.move(path_origem + arquivo, join(path_destino + arquivo))
             log.info('Movido com sucesso: "{}" -> "{}"'.format(path_origem + arquivo , join(path_destino, join(path_destino + arquivo))))
+            
+    def ajusta_data(data_entrada):
+        nova_data = datetime.strptime(data_entrada, f'%d/%m/%Y')
+        dt_saida = datetime.strftime(nova_data, f'%d/%m/%Y')
+        return dt_saida
+
+    def dt_parser(dt):
+        if isinstance(dt, datetime):
+            return dt.isoformat()
+

@@ -6,58 +6,55 @@ from Libs.Classes import *
 import json
 import pymongo
 from datetime import date
+from Libs.DB import *
 
 ret = Retorno_Inatividade()
 
 
-def atualiza_mongo(conexao_mongo, processo, status, critica):
-    doc = conexao_mongo.find_one({"NumeroProcesso": processo, "Status": 0})
-    if doc:
-        doc['Status'] = status
-        doc['DataSubsidio'] = data_em_texto
-        doc['Critica'] = critica
-        conexao_mongo.update_one({"NumeroProcesso": processo, "Status": 0}, {"$set": doc}, upsert=False)
 
-
-def callback(ch, method, body):
+def callback(ch, method, propreties ,body):
     try:
         log.info("[x] Dados recebidos:  %r" % body.decode())
         status = -1
         #Chamando os métodos que fazem o tratamento antes do upload
         #!Aqui nesse trecho, estamos pegando o Json da fila e serializando para o objeto up (Upload)
         json_fila = json.loads(body.decode())
-        up = Upload()
-        up.NumeroProcesso = json_fila['NumeroProcesso']
-        up.DataCriacao = json_fila['DataSubsidio']
-        up.Status = json_fila['Status']
+        up = C6_Upload_Fila()
+        up.numero_processo = json_fila['numero_processo']
+        up.data_criacao = json_fila['data_criacao']
+        up.status = json_fila['status']
+        up.argumento = json_fila['argumento']
+        up.caminho_logico_arquivo = json_fila['caminho_logico_arquivo']
+        
 
         log.info('[*] Chamando o método que realiza o upload do arquivo')
 
-        ret = cert.lancamento_processo_subsidio(a)
+        ret = cert.lancamento_copias(up)
 
         if ret is not None and ret.ativo:
             if ret.processo:
-                atualiza_mongo(mycol, a.NumeroProcesso, 1, f"Subsídio do processo: {a.NumeroProcesso} - realizado")
-                log.info(f"[x] Subsídio:{a.NumeroProcesso} - realizado")
+                #!Atualiza o status 
+                connmongo.atualiza_mongo({'numero_processo':up.numero_processo},{'status':1})
+                log.info(f"[x] Upload:{up.numero_processo} - realizado")
                 ch.basic_ack(delivery_tag=method.delivery_tag)
             else:
-                atualiza_mongo(mycol, a.NumeroProcesso, 2,f"Subsídio do processo: {a.NumeroProcesso} - não realizado")
-                log.info(f"[x] Subsídio:{a.NumeroProcesso} - não realizado")
+                connmongo.atualiza_mongo({'numero_processo':up.numero_processo},{'status':2})
+                log.info(f"[x] Upload:{up.numero_processo} - não realizado")
                 ch.basic_ack(delivery_tag=method.delivery_tag)
         else:
             ret.processo = False
             while ret.processo == False:
                 ret = cert.login_portal()
             
-                atualiza_mongo(mycol, a.NumeroProcesso, 2,f"Subsídio do processo: {a.NumeroProcesso} - não realizado")
-                log.info(f"[x] Subsídio:{a.NumeroProcesso} - não realizado")
+                connmongo.atualiza_mongo({'numero_processo':up.numero_processo},{'status':2})
+                log.info(f"[x] Upload:{up.numero_processo} - não realizado")
                 ch.basic_ack(delivery_tag=method.delivery_tag)
     except:
         ret.processo = False
         while ret.processo == False:
             ret = cert.login_portal()
-            atualiza_mongo(mycol, a.NumeroProcesso, 2,f"Subsídio do processo: {a.NumeroProcesso} - não realizado")
-            log.info(f"[x] Subsídio:{a.NumeroProcesso} - não realizado")
+            connmongo.atualiza_mongo({'numero_processo':up.numero_processo},{'status':2})
+            log.info(f"[x] Upload:{up.numero_processo} - não realizado")
             ch.basic_ack(delivery_tag=method.delivery_tag)
 
 if __name__ == "__main__":
@@ -73,12 +70,12 @@ if __name__ == "__main__":
     host = j.retorna_host_rabbitmq()
     mongoconexao = j.retorna_mongodb_conexao()
     mongobanco = j.retorna_mongodb_banco()
+    mongocolecao = j.retorna_mongodb_colecao_upload()
     
     #cria o Objeto que vai manipular o Mongo
-    myclient = pymongo.MongoClient(mongoconexao)
-    mydb = myclient[mongobanco]
-    mycol = mydb['Upload']
-
+    #Conexão com o Mongo para gravaço dentro do receita_cad
+    connmongo = Mongo(mongobanco, mongocolecao)
+    
     #pegando a data do dia e transformando em texto
     data_atual = date.today()
     data_em_texto = f'{data_atual.day}/{data_atual.month}/{data_atual.year}'

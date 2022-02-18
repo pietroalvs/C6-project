@@ -448,16 +448,16 @@ class C6():
             retorno.processo = False
             log.info('Inconsistência no sistema...')
             return retorno
-    def lancamento_copias(self, Processo:Upload)-> bool:
+    def lancamento_copias(self, Processo:C6_Upload_Fila)-> bool:
         
             #criando o objeto upload e passando os valores que vieram da fila para esse objeto.
-            up = Upload()
-            up.NumeroProcesso = Processo.NumeroProcesso
-            up.CaminhoArquivo = Processo.CaminhoArquivo
-            up.NomeArquivo = Processo.NomeArquivo
-            up.Status = Processo.Status
+            up = C6_Upload_Fila()
+            up.numero_processo = Processo.numero_processo
+            up.caminho_logico_arquivo = Processo.caminho_logico_arquivo
+            up.argumento = Processo.argumento
+            up.status = Processo.status
             
-            log.info(f'Capturando o processo: {up.NumeroProcesso}')
+            log.info(f'Capturando o processo: {up.numero_processo}')
 
             combo_processo = check_exists_by_id(self.driver, 'campoChavePesqHeader')
             if combo_processo:
@@ -473,7 +473,7 @@ class C6():
             if pesquisa_processo:
                 log.info('Preenchendo campo pesquisa')
                 pesquisa_processo.send_keys(Keys.LEFT_CONTROL + 'A')
-                pesquisa_processo.send_keys(up.NumeroProcesso)
+                pesquisa_processo.send_keys(up.numero_processo)
             else:
                 retorno.processo = False
                 return retorno
@@ -523,7 +523,7 @@ class C6():
                             pyautogui.press('enter')
                             sleep(1)
                             #Escrevendo o caminho do arquivo no campo selecionado
-                            pyautogui.write(up.CaminhoArquivo)
+                            pyautogui.write(up.caminho_logico_arquivo)
                             sleep(1)
                             #Clicando em Enter para pesquisar o caminho
                             pyautogui.press('enter')
@@ -532,7 +532,7 @@ class C6():
                             pyautogui.press('tab')
                             sleep(1)
                             #ESCREVENDO O NOME DO ARQUIVO
-                            pyautogui.write(up.NumeroProcesso)
+                            pyautogui.write(up.numero_processo)
                             sleep(1)
                             #Clicando em Enter para pesquisar o nome do arquivo
                             pyautogui.press('enter')
@@ -549,7 +549,7 @@ class C6():
                             pyautogui.press('enter')
                             sleep(1)
                 #Verificando se existe a palavra sentença no nome do arquivo, caso contenha, clicando em sentença            
-                if "SENTENÇA" in up.NomeArquivo:
+                if up.argumento == 1:
                     combo_sentenca = check_exists_by_class(self.driver, '#previews > div.dz-preview.dz-file-preview > select')
                     if combo_sentenca:
                       log.info('Acessando o combo da sentença')

@@ -15,6 +15,7 @@ from Libs.AppConfig import appConfig
 from Libs.Classes import *
 from Libs.Logs import Logs
 from Libs.RabbitMQ import *
+from Libs.Uteis import *
 
 #instancia variavel de objeto de log
 log = Logs.RetornaLog("--Upload de pastas C6--")
@@ -27,6 +28,7 @@ data = appConfig()
 _origem = data.retorna_pasta_origem_copias()
 _destino = data.retorna_pasta_nafila()
 
+
 #instancia variavel de objeto de MongoDB (banco de dados)
 mongoconexao = data.retorna_mongodb_conexao()
 mongobanco = data.retorna_mongodb_banco()
@@ -37,82 +39,58 @@ bancomongo = conexaomongo[mongobanco]
 tabelamongo = bancomongo[mongocolecao]
 
 #Data
-data_atual = datetime.today()
-data_em_texto = f'{data_atual.day}/{data_atual.month}/{data_atual.year}'
-
-def dt_parser(dt):
-    if isinstance(dt, datetime):
-        return dt.isoformat()
-
-def ajusta_data(data_entrada):
-    nova_data = datetime.strptime(data_entrada, f'%d/%m/%Y')
-    dt_saida = datetime.strftime(nova_data, f'%d/%m/%Y')
-    return dt_saida
-
-
-def mover_arquivo(path_origem, path_destino, pasta=False, arquivo=''):
-    if not Path(path_destino).is_dir():
-        os.mkdir(path_destino)
-        
-    if pasta:
-        for item in [join(path_origem, f) for f in listdir(path_origem) if isfile(join(path_origem, f)) ]:
-            log.info(f"Movendo arquivo de: {path_origem} para: {path_destino}.")
-            shutil.move(item, join(path_destino, basename(item)))
-            log.info('Movido com sucesso: "{}" -> "{}"'.format(item, join(path_destino, basename(item))))
-    else:
-        log.info(f"Movendo arquivo de: {path_origem} para: {path_destino}.")
-        shutil.move(path_origem + arquivo, join(path_destino + arquivo))
-        log.info('Movido com sucesso: "{}" -> "{}"'.format(path_origem + arquivo , join(path_destino, join(path_destino + arquivo))))
-
+data_atual = date.today()
+data_em_texto = f'{data_atual.year}-{data_atual.month}-{data_atual.day}'
 
 
 def arquivos_existentes(caminho):
-    #caminho da pasta que está sendo monitorada.
-    caminho_pasta = caminho
-    #retorna a lista de arquivos dentro da pasta ignorando as subpastas
-    lista_de_arquivos = [f for f in listdir(caminho_pasta) if isfile(join(caminho_pasta, f))]
+    
     #conectando na fila do rabbitmq
     con_fila = Produtor.ConectaRabbit(data.retorna_host_rabbitmq())
     canal = Produtor.CriarCanal(con_fila)
-    contador_fila = 0
-    log.info(f'Aquivos encontrados na pasta')
-    for arquivo in lista_de_arquivos:
-        try:
-            if not os.path.isdir(caminho + arquivo):
-                origem = caminho + arquivo                
+   
+    
+        
+    #!regex que trata a nomenclatura dos arquivos na pasta
+    regex_argumento = "SENTENÇA EXTINÇÃO|SENTENÇA PROCEDENTE|SENTENÇA IMPROCEDENTE|SENTEÇA PARCIALMENTE PROCEDENTE"
+    #!regex cnj
+    regex_cnj = "^\d{7}-\d{2}.\d{4}.\d{1}.\d{2}.\d{4}"
+    #!Usar a lib Uteis que vou mandar para vcs.. colocar na pasta Libs
+    #!Esse comando recebe o argumento do caminho da pasta a ser lida e retorna uma lista de arquivos nela contidos. 
+    #! CAMINHO PASTA
+    _caminho = r'\\10.67.0.24\\nj.11\\GED\\PORTAL\\NJ.05\\BANCO C6 CONSIGNADO S.A\\'
+    lista = Uteis.listar_arquivos_pasta(_caminho)
+    
+    if lista:
+        log.info(f'Aquivos encontrados na pasta')
+        for l in lista:
+            #!O Laço percorre a lista de arquivos. Aqui a gente separa tudo q precisa, cria o objeto da nossa fila. Ou seja, para cada arquivo lido no laço, a gente cria um objeto e separa as informações.
+            objeto_fila = C6_Upload_Fila()
+            objeto_fila.caminho_logico_arquivo = _caminho + l
+            objeto_fila.status = 0
+            objeto_fila.data_criacao = data_em_texto
             
-                arquivo_analisado = _destino + pathlib.Path(origem).name
-                nome_arquivo = os.path.basename(origem)
-                contador_fila += 1
-
-                #Regex do padrão CNJ para identificar o numero do processo dentro do nome do arquivo
-                regex = "\d{7}-\d{2}.\d{4}.\d{1}.\d{2}.\d{4}"
-                #verificando se existe o padrão CNJ dentro do nome do arquivo.
-                encontrou_cnj = re.search(regex, nome_arquivo)
-                up = Upload()
+            #! aqui vamos usar o split com a lógica de separar os nomes, porque usam "-" para separar, então a gente aproveita isso 
+            lista_arquivos  = l.split('-',1) #!quebra apenas no primeiro "-" porque senão bagunça o CNJ
+            
+            if lista_arquivos:
                 
-                if encontrou_cnj:
-                    #método que retorna o padrão encontrado dentro do regex (retorna uma lista)
-                    cnj_processo = re.findall(regex,nome_arquivo)
-                    #testar se a lista tem valor
-                    if cnj_processo:
-                        up.NumeroProcesso = cnj_processo[0]
-                        up.CaminhoArquivo = arquivo_analisado
-                        up.NomeArquivo = nome_arquivo
-                        up.DataCriacao = dt_parser(datetime.strptime(data_em_texto,"%d/%m/%Y"))
-                        up.Status = 0
-                
-                        #chamar o método que move o arquivo da pasta monitorada para a pasta de "fila"
-                        mover_arquivo(caminho, _destino, False, arquivo)
-                        log.info(f"Criando mensagem com o conteúdo: {j.dumps(para_dict(up))}")
-                        #comando que realiza o cadastro na fila do Rabbit
-                        Produtor.CriaMensagem(canal, "UploadC6", j.dumps(para_dict(up)), True)
-                        #Inserindo o registro no Mongo
-                        tabelamongo.insert_one(para_dict(up))
-                        
-        except Exception as e:
-            log.info(e)
+                #!Verificação de argumento *** Pietro aqui é melhor a gente verificar, e não no código do robô em si. 
+                regex_consulta = re.search(regex_argumento, lista_arquivos[0])
+                if regex_consulta != None:
+                    objeto_fila.argumento = 1
+                else:
+                    objeto_fila.argumento = 2
+                    
+                teste_regex = re.search(regex_cnj, lista_arquivos[1].strip())
+                if teste_regex:
+                    objeto_fila.numero_processo = re.findall(regex_cnj, lista_arquivos[1].strip())[0]
 
+                #!INSERIU NO BANCO CERTINHO 
+                tabelamongo.insert_one(para_dict(objeto_fila))
+                
+                canal.basic_publish(exchange='', routing_key='UploadC6', body=json.dumps(para_dict(objeto_fila)))
+                
     Produtor.FechaConRabbit(con_fila)
     
 #Classe Main da aplicação 
