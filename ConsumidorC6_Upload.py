@@ -8,9 +8,9 @@ import pymongo
 from datetime import date
 from Libs.DB import *
 
-ret = Retorno_Inatividade()#
+ret = Retorno_Inatividade()
 
-
+ret_user = retorno_usuario()
 
 def callback(ch, method, propreties ,body):
     try:

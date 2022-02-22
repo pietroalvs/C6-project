@@ -39,9 +39,10 @@ class C6_Upload_Fila(object):
         
 class retorno_usuario:
     def __init__(self) -> None:
-        self.usuario1 = False
-        self.usuario2 = False
-        self.usuario3 = False
+        self.contador = 0
+        self.testar_user1 = ''
+        self.testar_user2 = ''
+        self.testar_user3 = ''
         
     
 def para_dict(obj):

@@ -27,7 +27,7 @@ data_atual = date.today()
 data_em_texto = f'{data_atual.day}/{data_atual.month}/{data_atual.year}'
 url_portal = json.retorna_c6_url()
 retorno = Retorno_Inatividade()
-
+caminho = r'\\10.67.0.24\nj.11\GED\PORTAL\NJ.05\BANCO C6 CONSIGNADO S.A'
 
 class C6():
     def __init__(self, proxy = False) -> None:
@@ -44,6 +44,7 @@ class C6():
         self.driver = webdriver.Chrome('./chromedriver', chrome_options=chrome_options)
         
     
+    
     def login_portal(self)-> Retorno_Inatividade:
         
         login_usuario = json.retorna_c6_login()
@@ -51,9 +52,6 @@ class C6():
         login_usuario2 = json.retorna_c6_login2()
         senha_usuario2 = json.retorna_c6_senha2()
         
-        #contador = 1
-        #portal_logou = True
-        #while portal_logou:   
             
         log.info('Iniciando o método de login no portal')
         self.driver.maximize_window()
@@ -64,17 +62,40 @@ class C6():
         
         login = check_exists_by_id(self.driver, 'login', ativo=True)
         if login:
+            #Atualização Pietro
+            #verifica_usuarios(self.driver)
+            '''log.info(f'contador é {contador}')
+            log.info(f'User 1 é igual a {testar_user1}')
+            log.info(f'User 2 é igual a {testar_user2}')
+            log.info(f'User 3 é igual a {testar_user3}')'''
+            #if testar_user1 == True:
             log.info('Preenchendo login')
             login.send_keys(login_usuario2)
-            
+            #elif testar_user2 == True:
+                #log.info('Preenchendo login')
+                #login.send_keys(login_usuario2)
+            #elif testar_user3 == True:
+                #log.info('Preenchendo login')
+                #login.send_keys(login_usuario)
+                
         else:
             retorno.processo = False
             return retorno
         
         senha = check_exists_by_id(self.driver, 'passw', ativo=True)
         if senha:
+            #if testar_user1 == True:
             log.info('Preenchendo a senha')
             senha.send_keys(senha_usuario2)
+                
+            #elif testar_user2 == True:
+                #log.info('Preenchendo a senha')
+                #senha.send_keys(senha_usuario2)
+                
+            #elif testar_user3 == True:
+                #log.info('Preenchendo a senha')
+                #senha.send_keys(senha_usuario)
+                
         else:
             retorno.processo = False
             return retorno
@@ -96,19 +117,26 @@ class C6():
                 sleep(0.5)
                 pyautogui.press('enter')
                 sleep(16)
-                #if (contador%2) == 1: #Dando duplo clique para copiar o código
+                #Clicando no Login 1 
+                #if testar_user1 == True:
                 #pyautogui.doubleClick(x=97, y=135)
-                sleep(0.7)
-                #pyautogui.doubleClick(x=97, y=135)
-                #else:
-                pyautogui.doubleClick(x=90, y=214) #Clicando no segundo login disponível
                 sleep(1)
+                #Clicando no login 2
+                #elif testar_user2 == True:
+                pyautogui.doubleClick(x=90, y=214) 
+                sleep(1)
+                #Testando novamente o login 1
+                #elif testar_user3 == True:
+                    #pyautogui.doubleClick(x=97, y=135)
+                    #sleep(1)
                 #Clicando no X para fechar
                 pyautogui.click(x=193, y=17)
                 sleep(1)
                 #Clicando em confirmar fechamento
                 pyautogui.click(x=276, y=239)
                 sleep(1)
+                #Clicando no navegador
+                pyautogui.click(x=666, y=0)
                 #CLIANDO NO CAMPO DE DIGITAR O CÓDIGO 
                 log.info('Clicando no campo de digitar o código')
                 campo_mfa.click()
@@ -135,6 +163,7 @@ class C6():
             errologin = check_exists_by_class(self.driver, 'message.messageLogin.error', ativo=True)
             if errologin:
                 log.info(f'Erro de login encontrado: {errologin.text}')
+                contador = contador + 1
                 if errologin.text.startswith("Usuário logado na estação"):
                     log.info('Tentando executar o login novamente...')
                     log.info('Aguardando 10 segundos para tentar novamente...')
@@ -470,6 +499,7 @@ class C6():
                 log.info('Preenchendo campo pesquisa')
                 pesquisa_processo.send_keys(Keys.LEFT_CONTROL + 'A')
                 pesquisa_processo.send_keys(up.numero_processo)
+                sleep(2)
             else:
                 retorno.processo = False
                 return retorno
@@ -490,19 +520,19 @@ class C6():
             if clique_number_processo:
                 log.info('Clicando no número do processo')
                 clique_number_processo.click()
-                sleep(1)
+                sleep(2)
             # CLICANDO EM ARQUIVOS
                 clique_arquivos = check_exists_by_id(self.driver, 'profile')
                 if clique_arquivos:
                     log.info('Clicando em arquivos')
                     clique_arquivos.click()
-                    sleep(0.8)
+                    sleep(2)
                 #CLICANDO NO MAIS DO DOCUMENTO
-                    clique_mais = check_exists_by_xpath(self.driver, '/html/body/div[2]/div[2]/div[3]/div[2]/div/div[2]/div/div[2]/div[9]/div[2]/form/div[1]/div/div[2]/div[1]/div[2]/ul/li[3]/div[1]/span[2]')
+                    clique_mais = check_exists_by_class(self.driver, 'treeview-button-add')
                     if clique_mais:
                         log.info('Clicando no mais para upload do documento')
                         clique_mais.click()
-                        sleep(0.5)
+                        sleep(2)
                         #CLICANDO EM "CLIQUE AQUI PARA SUBIR SEUS ARQUIVOS"
                         clique_inserir = check_exists_by_xpath(self.driver, '/html/body/div[2]/div[2]/div[3]/div[2]/div/div[1]/div/form/div[3]')
                         if clique_inserir:
@@ -519,7 +549,7 @@ class C6():
                             pyautogui.press('enter')
                             sleep(1)
                             #Escrevendo o caminho do arquivo no campo selecionado
-                            pyautogui.write(up.caminho_logico_arquivo)
+                            pyautogui.write(caminho)
                             sleep(1)
                             #Clicando em Enter para pesquisar o caminho
                             pyautogui.press('enter')
@@ -584,7 +614,8 @@ class C6():
                 if pesquisa_processo:
                     log.info('limpando o campo de pesquisa')
                     pesquisa_processo.send_keys(Keys.LEFT_CONTROL + 'A')
-                    pesquisa_processo.send_keys(Keys.DELETE)
+                    pesquisa_processo.send_keys(Keys.BACK_SPACE)
+                    sleep(1)
                 else:
                     retorno.processo = False
                 return retorno
@@ -869,32 +900,39 @@ def verifica_inatividade(driver):
 
 
 
-
-
-
-def verifica_usuarios(self) -> retorno_usuario:
+'''def verifica_usuarios(self) -> retorno_usuario:
     
-    usuarios_disponiveis = [f'{json.retorna_c6_login()}',f'{json.retorna_c6_senha()}'
-                            f'{json.retorna_c6_login2()}'f'{json.retorna_c6_senha2()}']
-    try:
-        cont = 0
-        while usuarios_disponiveis[1, 2] == False
+    if contador == 1:
+        contador = contador + 1
+        log.info(f'{contador}')'''
+        
         
 
 
-#!TESTE
-def verifica_carregamento(driver, debug=False):
-    try:
-        cont = 0
-        display = driver.find_element_by_id('_viewRoot:status.start').value_of_css_property('display') 
-        while display == 'inline':
-            cont +=1
-            sleep(1)
-            log.error(f'Carregamento de tela encontrado: Aguardando {cont}')
-            display = driver.find_element_by_id('_viewRoot:status.start').value_of_css_property('display')
-        log.info('Carregamento de tela concluído')
-        
-    except NoSuchElementException as erro:
-        log.info(f'Carregamento de tela não localizado...')
-    return False
 
+
+
+'''#if contador == 1:
+    #testar_user1 = True
+        while testar_user1 == True:
+            testar_user2 = False
+            testar_user3 = False
+#return 
+    
+    #elif contador == 2:
+        #testar_user2 = True
+        while testar_user2 == True:
+            testar_user1 = False
+            testar_user3 = False
+        #return
+        
+    #elif contador == 3:
+        #testar_user3 = True
+        while testar_user3 == True:
+            testar_user1 = False
+            testar_user2 = False
+        #return
+        
+    #else:
+        #contador = 1
+'''
