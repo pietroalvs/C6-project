@@ -8,7 +8,7 @@ import pymongo
 from datetime import date
 from Libs.DB import *
 
-ret = Retorno_Inatividade()
+ret = Retorno_Inatividade()#
 
 
 

@@ -37,6 +37,12 @@ class C6_Upload_Fila(object):
         self.status = 0
         self.caminho_logico_arquivo = ''  
         
+class retorno_usuario:
+    def __init__(self) -> None:
+        self.usuario1 = False
+        self.usuario2 = False
+        self.usuario3 = False
+        
     
 def para_dict(obj):
     # Se for um objeto, transforma num dict

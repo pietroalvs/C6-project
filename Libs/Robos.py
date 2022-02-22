@@ -1,3 +1,4 @@
+from lib2to3.pgen2.driver import load_grammar
 from re import A, X
 from time import sleep
 from turtle import right
@@ -7,6 +8,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from sklearn.metrics import zero_one_loss
 from Libs.Logs import Logs
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -25,8 +27,6 @@ data_atual = date.today()
 data_em_texto = f'{data_atual.day}/{data_atual.month}/{data_atual.year}'
 url_portal = json.retorna_c6_url()
 retorno = Retorno_Inatividade()
-
-
 
 
 class C6():
@@ -64,25 +64,17 @@ class C6():
         
         login = check_exists_by_id(self.driver, 'login', ativo=True)
         if login:
-            #if (contador%2) == 1:
             log.info('Preenchendo login')
-            #log.info(f'Contador é igual a:{contador}')
-            login.send_keys(login_usuario)
-            #else:
-            #log.info('Preenchendo login')
-            #login.send_keys(login_usuario2)
+            login.send_keys(login_usuario2)
+            
         else:
             retorno.processo = False
             return retorno
         
         senha = check_exists_by_id(self.driver, 'passw', ativo=True)
         if senha:
-            #if (contador%2) == 1:
             log.info('Preenchendo a senha')
-            senha.send_keys(senha_usuario)
-            #else:
-            #log.info('Preenchendo a senha')
-            #senha.send_keys(senha_usuario2)
+            senha.send_keys(senha_usuario2)
         else:
             retorno.processo = False
             return retorno
@@ -93,7 +85,7 @@ class C6():
             btn_entrar.click()
             
             #INICIANDO VERIFICAÇÃO DO MFA
-            campo_mfa = check_exists_by_id(self.driver, 'mfaPassCode', ativo=True)
+            campo_mfa = check_exists_by_class(self.driver, 'txtLogin', ativo=True)
             if campo_mfa:
                 log.info('Abrindo aplicativo OKTA para pegar o código')     
                 pyautogui.press("win")
@@ -105,24 +97,25 @@ class C6():
                 pyautogui.press('enter')
                 sleep(16)
                 #if (contador%2) == 1: #Dando duplo clique para copiar o código
-                pyautogui.doubleClick(x=97, y=135)
-                sleep(0.5)
+                #pyautogui.doubleClick(x=97, y=135)
+                sleep(0.7)
+                #pyautogui.doubleClick(x=97, y=135)
                 #else:
-                    #pyautogui.doubleClick(x=90, y=214) #Clicando no segundo login disponível
-                    #sleep(0.5)
+                pyautogui.doubleClick(x=90, y=214) #Clicando no segundo login disponível
+                sleep(1)
                 #Clicando no X para fechar
                 pyautogui.click(x=193, y=17)
-                sleep(0.5)
+                sleep(1)
                 #Clicando em confirmar fechamento
                 pyautogui.click(x=276, y=239)
-                sleep(0.5)
+                sleep(1)
                 #CLIANDO NO CAMPO DE DIGITAR O CÓDIGO 
                 log.info('Clicando no campo de digitar o código')
                 campo_mfa.click()
-                sleep(0.5)
+                sleep(3)
                 # Dando Ctrl + v para colar o código copiado
                 pyautogui.hotkey('ctrl', 'v')
-                sleep(0.5)
+                sleep(3)
                 
             else:
                 retorno.processo = False
@@ -141,22 +134,21 @@ class C6():
             login = check_exists_by_id(self.driver, 'login', ativo=True)  
             errologin = check_exists_by_class(self.driver, 'message.messageLogin.error', ativo=True)
             if errologin:
-                #contador = contador + 1
-                #log.info(f'Contador é:{contador}')
                 log.info(f'Erro de login encontrado: {errologin.text}')
                 if errologin.text.startswith("Usuário logado na estação"):
                     log.info('Tentando executar o login novamente...')
                     log.info('Aguardando 10 segundos para tentar novamente...')
                     sleep(10)
-                    #retorno.processo = False
-                    #return retorno
+                    if errologin:
+                        retorno.processo = False 
+                        return retorno
                 else:
                     sleep(3)
                     log.info(f'Não encontrado erro de login')
                     self.driver.get('https://gracco.corp.c6bank.com/gestao-processos')
                     
                     log.info('Acessando o link: https://gracco.corp.c6bank.com/gestao-processos')
-                        #Criado esse bloco para testar o carregamento da página. Enquanto estiver carregando ele não sai do laço   
+                    #Criado esse bloco para testar o carregamento da página. Enquanto estiver carregando ele não sai do laço   
                     verifica_carregamento(self.driver)
                     #aqui vai o return true. 
                     retorno.processo = True
@@ -177,7 +169,6 @@ class C6():
                 
                 
             else:
-                #portal_logou = False
                 log.info(f'Não encontrado erro de login')
                 self.driver.get('https://gracco.corp.c6bank.com/gestao-processos')
                 log.info('Acessando o link: https://gracco.corp.c6bank.com/gestao-processos')
@@ -588,7 +579,15 @@ class C6():
                     btn_fechar.click()
                     sleep(2)
                     
-
+                pesquisa_processo = check_exists_by_id(
+                self.driver, 'palavraChavePesqHeader')
+                if pesquisa_processo:
+                    log.info('limpando o campo de pesquisa')
+                    pesquisa_processo.send_keys(Keys.LEFT_CONTROL + 'A')
+                    pesquisa_processo.send_keys(Keys.DELETE)
+                else:
+                    retorno.processo = False
+                return retorno
                 
                     
                     
@@ -598,7 +597,7 @@ class C6():
                               
 def verifica_carregamento(driver, debug=False):
     try:
-        cont =0
+        cont = 0
         display = driver.find_element_by_id('_viewRoot:status.start').value_of_css_property('display') 
         while display == 'inline':
             cont +=1
@@ -871,4 +870,31 @@ def verifica_inatividade(driver):
 
 
 
+
+
+def verifica_usuarios(self) -> retorno_usuario:
+    
+    usuarios_disponiveis = [f'{json.retorna_c6_login()}',f'{json.retorna_c6_senha()}'
+                            f'{json.retorna_c6_login2()}'f'{json.retorna_c6_senha2()}']
+    try:
+        cont = 0
+        while usuarios_disponiveis[1, 2] == False
+        
+
+
+#!TESTE
+def verifica_carregamento(driver, debug=False):
+    try:
+        cont = 0
+        display = driver.find_element_by_id('_viewRoot:status.start').value_of_css_property('display') 
+        while display == 'inline':
+            cont +=1
+            sleep(1)
+            log.error(f'Carregamento de tela encontrado: Aguardando {cont}')
+            display = driver.find_element_by_id('_viewRoot:status.start').value_of_css_property('display')
+        log.info('Carregamento de tela concluído')
+        
+    except NoSuchElementException as erro:
+        log.info(f'Carregamento de tela não localizado...')
+    return False
 

@@ -9283,3 +9283,325 @@ Larissa De Matos Silva  (Finch - ADM)
 2022-02-18 15:51:52,913:--C6--:Erro de login encontrado: Usuário logado na estação: 10.110.4.152 / 10.110.4.152
 2022-02-18 15:52:20,347:--C6--:Tentando executar o login novamente...
 2022-02-18 15:52:21,893:--C6--:Aguardando 10 segundos para tentar novamente...
+2022-02-21 15:06:35,631:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:06:35,633:--C6--:Iniciando o método de login no portal
+2022-02-21 15:06:36,836:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:06:37,875:--C6--:Preenchendo login
+2022-02-21 15:06:38,935:--C6--:Preenchendo a senha
+2022-02-21 15:06:40,015:--C6--:Acessando o portal
+2022-02-21 15:06:43,035:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:07:02,937:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:07:05,144:--C6--:Acessando o portal
+2022-02-21 15:08:25,077:--C6--:Não encontrado erro de login
+2022-02-21 15:08:25,932:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-21 15:08:30,994:--C6--:Carregamento de tela não localizado...
+2022-02-21 15:08:45,150:--Consumidor Fila: C6 | Uploads--:[*] Abrindo conexão...
+2022-02-21 15:08:45,174:--Consumidor Fila: C6 | Uploads--:[*] Criando canal...
+2022-02-21 15:08:45,198:--Consumidor Fila: C6 | Uploads--:[*] Setando a fila e preparando para consumo...
+2022-02-21 15:08:45,199:--Consumidor Fila: C6 | Uploads--:[*] Aguardando para consumo...
+2022-02-21 15:08:45,237:--Consumidor Fila: C6 | Uploads--:[x] Dados recebidos:  '{"numero_processo": "5007047-23.2021.8.09.0051", "argumento": 2, "data_criacao": "2022-2-18", "status": 0, "caminho_logico_arquivo": "\\\\\\\\10.67.0.24\\\\\\\\nj.11\\\\\\\\GED\\\\\\\\PORTAL\\\\\\\\NJ.05\\\\\\\\BANCO C6 CONSIGNADO S.A\\\\\\\\AC\\u00d3RD\\u00c3O - 5007047-23.2021.8.09.0051 - 15-02-2022.pdf"}'
+2022-02-21 15:08:49,585:--Consumidor Fila: C6 | Uploads--:[*] Chamando o método que realiza o upload do arquivo
+2022-02-21 15:08:49,586:--C6--:Capturando o processo: 5007047-23.2021.8.09.0051
+2022-02-21 15:08:50,618:--C6--:Acessando a combo da pesquisa
+2022-02-21 15:08:51,738:--C6--:Preenchendo campo pesquisa
+2022-02-21 15:08:52,858:--C6--:Acessando botão de pesquisa
+2022-02-21 15:08:57,904:--C6--:Carregamento de tela não localizado...
+2022-02-21 15:09:05,004:--C6--:Clicando no número do processo
+2022-02-21 15:09:07,096:--C6--:Clicando em arquivos
+2022-02-21 15:09:09,006:--C6--:Clicando no mais para upload do documento
+2022-02-21 15:09:20,713:--C6--:Clicando em botão fechar
+2022-02-21 15:09:25,749:--C6--:Carregamento de tela não localizado...
+2022-02-21 15:25:55,452:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:25:55,455:--C6--:Iniciando o método de login no portal
+2022-02-21 15:25:56,588:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:25:57,618:--C6--:Preenchendo login
+2022-02-21 15:25:58,674:--C6--:Preenchendo a senha
+2022-02-21 15:25:59,755:--C6--:Acessando o portal
+2022-02-21 15:26:04,649:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:26:24,437:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:26:26,661:--C6--:Acessando o portal
+2022-02-21 15:27:36,056:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:27:36,058:--C6--:Iniciando o método de login no portal
+2022-02-21 15:27:37,392:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:27:38,424:--C6--:Preenchendo login
+2022-02-21 15:27:39,487:--C6--:Preenchendo a senha
+2022-02-21 15:27:40,583:--C6--:Acessando o portal
+2022-02-21 15:27:43,848:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:28:03,649:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:28:05,837:--C6--:Acessando o portal
+2022-02-21 15:30:17,017:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:30:17,020:--C6--:Iniciando o método de login no portal
+2022-02-21 15:30:18,668:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:30:19,693:--C6--:Preenchendo login
+2022-02-21 15:30:20,751:--C6--:Preenchendo a senha
+2022-02-21 15:30:21,840:--C6--:Acessando o portal
+2022-02-21 15:30:25,872:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:30:46,172:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:30:48,367:--C6--:Acessando o portal
+2022-02-21 15:31:43,031:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:31:43,032:--C6--:Iniciando o método de login no portal
+2022-02-21 15:31:45,429:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:31:46,455:--C6--:Preenchendo login
+2022-02-21 15:31:47,511:--C6--:Preenchendo a senha
+2022-02-21 15:31:48,592:--C6--:Acessando o portal
+2022-02-21 15:31:51,999:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:32:11,785:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:32:13,965:--C6--:Acessando o portal
+2022-02-21 15:33:35,158:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:33:35,160:--C6--:Iniciando o método de login no portal
+2022-02-21 15:33:36,383:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:33:37,408:--C6--:Preenchendo login
+2022-02-21 15:33:38,468:--C6--:Preenchendo a senha
+2022-02-21 15:33:39,552:--C6--:Acessando o portal
+2022-02-21 15:33:42,613:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:34:01,780:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:34:03,960:--C6--:Acessando o portal
+2022-02-21 15:35:08,129:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:35:08,131:--C6--:Iniciando o método de login no portal
+2022-02-21 15:35:09,391:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:35:10,421:--C6--:Preenchendo login
+2022-02-21 15:35:11,486:--C6--:Preenchendo a senha
+2022-02-21 15:35:12,555:--C6--:Acessando o portal
+2022-02-21 15:35:16,100:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:35:35,295:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:35:37,490:--C6--:Acessando o portal
+2022-02-21 15:36:36,080:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:36:36,082:--C6--:Iniciando o método de login no portal
+2022-02-21 15:36:37,308:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:36:38,336:--C6--:Preenchendo login
+2022-02-21 15:36:39,392:--C6--:Preenchendo a senha
+2022-02-21 15:36:40,468:--C6--:Acessando o portal
+2022-02-21 15:36:43,728:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:37:03,539:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:37:05,734:--C6--:Acessando o portal
+2022-02-21 15:38:19,862:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:38:19,865:--C6--:Iniciando o método de login no portal
+2022-02-21 15:38:21,044:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:38:22,078:--C6--:Preenchendo login
+2022-02-21 15:38:23,135:--C6--:Preenchendo a senha
+2022-02-21 15:38:24,213:--C6--:Acessando o portal
+2022-02-21 15:38:27,199:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:38:47,001:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:38:49,171:--C6--:Acessando o portal
+2022-02-21 15:40:08,492:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:40:08,493:--C6--:Iniciando o método de login no portal
+2022-02-21 15:40:10,367:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:40:11,394:--C6--:Preenchendo login
+2022-02-21 15:40:12,451:--C6--:Preenchendo a senha
+2022-02-21 15:40:13,535:--C6--:Acessando o portal
+2022-02-21 15:40:17,050:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:40:36,844:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:40:39,029:--C6--:Acessando o portal
+2022-02-21 15:42:31,983:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:42:31,984:--C6--:Iniciando o método de login no portal
+2022-02-21 15:42:33,269:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:42:34,293:--C6--:Preenchendo login
+2022-02-21 15:42:35,348:--C6--:Preenchendo a senha
+2022-02-21 15:42:36,418:--C6--:Acessando o portal
+2022-02-21 15:42:39,310:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:42:59,605:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:43:01,792:--C6--:Acessando o portal
+2022-02-21 15:44:50,226:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:44:50,228:--C6--:Iniciando o método de login no portal
+2022-02-21 15:44:51,500:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:44:52,532:--C6--:Preenchendo login
+2022-02-21 15:44:53,589:--C6--:Preenchendo a senha
+2022-02-21 15:44:54,667:--C6--:Acessando o portal
+2022-02-21 15:44:58,077:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:45:18,350:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:45:20,524:--C6--:Acessando o portal
+2022-02-21 15:46:48,560:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:46:48,561:--C6--:Iniciando o método de login no portal
+2022-02-21 15:46:49,815:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:46:50,839:--C6--:Preenchendo login
+2022-02-21 15:46:51,890:--C6--:Preenchendo a senha
+2022-02-21 15:46:52,972:--C6--:Acessando o portal
+2022-02-21 15:46:56,885:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:47:17,195:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:47:19,379:--C6--:Acessando o portal
+2022-02-21 15:48:15,484:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:48:15,485:--C6--:Iniciando o método de login no portal
+2022-02-21 15:48:17,443:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:48:18,474:--C6--:Preenchendo login
+2022-02-21 15:48:19,532:--C6--:Preenchendo a senha
+2022-02-21 15:48:20,615:--C6--:Acessando o portal
+2022-02-21 15:48:23,639:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:48:44,939:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:48:48,111:--C6--:Acessando o portal
+2022-02-21 15:49:58,618:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:49:58,620:--C6--:Iniciando o método de login no portal
+2022-02-21 15:49:59,925:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:50:00,950:--C6--:Preenchendo login
+2022-02-21 15:50:02,009:--C6--:Preenchendo a senha
+2022-02-21 15:50:03,079:--C6--:Acessando o portal
+2022-02-21 15:50:06,035:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:50:27,335:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:50:30,706:--C6--:Acessando o portal
+2022-02-21 15:52:50,692:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:52:50,694:--C6--:Iniciando o método de login no portal
+2022-02-21 15:52:51,894:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:52:52,922:--C6--:Preenchendo login
+2022-02-21 15:52:53,975:--C6--:Preenchendo a senha
+2022-02-21 15:52:55,043:--C6--:Acessando o portal
+2022-02-21 15:52:59,308:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:53:20,611:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:53:25,795:--C6--:Acessando o portal
+2022-02-21 15:54:32,834:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:54:32,836:--C6--:Iniciando o método de login no portal
+2022-02-21 15:54:34,012:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:54:35,037:--C6--:Preenchendo login
+2022-02-21 15:54:36,098:--C6--:Preenchendo a senha
+2022-02-21 15:54:37,168:--C6--:Acessando o portal
+2022-02-21 15:54:40,322:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:55:01,607:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:55:06,886:--C6--:Acessando o portal
+2022-02-21 15:56:57,704:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:56:57,706:--C6--:Iniciando o método de login no portal
+2022-02-21 15:56:58,928:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:56:59,957:--C6--:Preenchendo login
+2022-02-21 15:57:00,999:--C6--:Preenchendo a senha
+2022-02-21 15:57:02,069:--C6--:Acessando o portal
+2022-02-21 15:57:05,416:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 15:57:26,699:--C6--:Clicando no campo de digitar o código
+2022-02-21 15:57:33,867:--C6--:Acessando o portal
+2022-02-21 15:59:24,821:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 15:59:24,822:--C6--:Iniciando o método de login no portal
+2022-02-21 15:59:26,093:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 15:59:27,126:--C6--:Preenchendo login
+2022-02-21 15:59:28,183:--C6--:Preenchendo a senha
+2022-02-21 15:59:29,260:--C6--:Acessando o portal
+2022-02-21 15:59:32,386:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 16:00:07,048:--C6--:Clicando no campo de digitar o código
+2022-02-21 16:01:52,823:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 16:01:52,826:--C6--:Iniciando o método de login no portal
+2022-02-21 16:01:54,139:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 16:01:55,164:--C6--:Preenchendo login
+2022-02-21 16:01:56,224:--C6--:Preenchendo a senha
+2022-02-21 16:01:57,293:--C6--:Acessando o portal
+2022-02-21 16:02:00,677:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 16:02:25,375:--C6--:Clicando no campo de digitar o código
+2022-02-21 16:04:11,531:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 16:04:11,533:--C6--:Iniciando o método de login no portal
+2022-02-21 16:04:12,729:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 16:04:13,753:--C6--:Preenchendo login
+2022-02-21 16:04:14,808:--C6--:Preenchendo a senha
+2022-02-21 16:04:15,885:--C6--:Acessando o portal
+2022-02-21 16:04:19,365:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 16:04:40,679:--C6--:Clicando no campo de digitar o código
+2022-02-21 16:06:01,224:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 16:06:01,227:--C6--:Iniciando o método de login no portal
+2022-02-21 16:06:02,353:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 16:06:03,380:--C6--:Preenchendo login
+2022-02-21 16:06:04,440:--C6--:Preenchendo a senha
+2022-02-21 16:06:05,519:--C6--:Acessando o portal
+2022-02-21 16:06:08,806:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 16:06:30,925:--C6--:Clicando no campo de digitar o código
+2022-02-21 16:07:08,840:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 16:07:08,842:--C6--:Iniciando o método de login no portal
+2022-02-21 16:07:10,073:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 16:07:11,098:--C6--:Preenchendo login
+2022-02-21 16:07:12,153:--C6--:Preenchendo a senha
+2022-02-21 16:07:13,225:--C6--:Acessando o portal
+2022-02-21 16:07:16,654:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 16:07:38,772:--C6--:Clicando no campo de digitar o código
+2022-02-21 16:10:35,108:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 16:10:35,111:--C6--:Iniciando o método de login no portal
+2022-02-21 16:10:36,330:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 16:10:37,356:--C6--:Preenchendo login
+2022-02-21 16:10:38,418:--C6--:Preenchendo a senha
+2022-02-21 16:10:39,503:--C6--:Acessando o portal
+2022-02-21 16:10:44,078:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 16:11:06,193:--C6--:Clicando no campo de digitar o código
+2022-02-21 17:17:51,861:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 17:17:51,862:--C6--:Iniciando o método de login no portal
+2022-02-21 17:17:53,063:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 17:17:54,100:--C6--:Preenchendo login
+2022-02-21 17:17:55,155:--C6--:Preenchendo a senha
+2022-02-21 17:17:56,238:--C6--:Acessando o portal
+2022-02-21 17:17:59,411:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 17:18:21,576:--C6--:Clicando no campo de digitar o código
+2022-02-21 18:45:33,729:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 18:45:33,729:--C6--:Iniciando o método de login no portal
+2022-02-21 18:45:34,973:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 18:45:36,008:--C6--:Preenchendo login
+2022-02-21 18:45:37,063:--C6--:Preenchendo a senha
+2022-02-21 18:45:38,156:--C6--:Acessando o portal
+2022-02-21 18:45:43,013:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 18:46:05,163:--C6--:Clicando no campo de digitar o código
+2022-02-21 18:46:12,401:--C6--:Acessando o portal
+2022-02-21 18:46:31,060:--C6--:Não encontrado erro de login
+2022-02-21 18:46:32,106:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-21 18:46:37,132:--C6--:Carregamento de tela não localizado...
+2022-02-21 18:46:37,275:--Consumidor Fila: C6 | Uploads--:[*] Abrindo conexão...
+2022-02-21 18:46:37,321:--Consumidor Fila: C6 | Uploads--:[*] Criando canal...
+2022-02-21 18:46:37,369:--Consumidor Fila: C6 | Uploads--:[*] Setando a fila e preparando para consumo...
+2022-02-21 18:46:37,369:--Consumidor Fila: C6 | Uploads--:[*] Aguardando para consumo...
+2022-02-21 18:46:37,432:--Consumidor Fila: C6 | Uploads--:[x] Dados recebidos:  '{"numero_processo": "5007047-23.2021.8.09.0051", "argumento": 2, "data_criacao": "2022-2-18", "status": 0, "caminho_logico_arquivo": "\\\\\\\\10.67.0.24\\\\\\\\nj.11\\\\\\\\GED\\\\\\\\PORTAL\\\\\\\\NJ.05\\\\\\\\BANCO C6 CONSIGNADO S.A\\\\\\\\AC\\u00d3RD\\u00c3O - 5007047-23.2021.8.09.0051 - 15-02-2022.pdf"}'
+2022-02-21 18:46:37,448:--Consumidor Fila: C6 | Uploads--:[*] Chamando o método que realiza o upload do arquivo
+2022-02-21 18:46:37,448:--C6--:Capturando o processo: 5007047-23.2021.8.09.0051
+2022-02-21 18:46:38,473:--C6--:Acessando a combo da pesquisa
+2022-02-21 18:46:39,590:--C6--:Preenchendo campo pesquisa
+2022-02-21 18:46:40,741:--C6--:Acessando botão de pesquisa
+2022-02-21 18:46:45,775:--C6--:Carregamento de tela não localizado...
+2022-02-21 18:46:52,914:--C6--:Clicando no número do processo
+2022-02-21 18:46:55,029:--C6--:Clicando em arquivos
+2022-02-21 18:46:57,005:--C6--:Clicando no mais para upload do documento
+2022-02-21 18:47:08,670:--C6--:Clicando em botão fechar
+2022-02-21 18:47:13,725:--C6--:Carregamento de tela não localizado...
+2022-02-21 18:47:17,006:--C6--:limpando o campo de pesquisa
+2022-02-21 18:47:17,180:--Consumidor Fila: C6 | Uploads--:[x] Upload:5007047-23.2021.8.09.0051 - realizado
+2022-02-21 18:47:17,212:--Consumidor Fila: C6 | Uploads--:[x] Dados recebidos:  '{"numero_processo": "9000787-53.2021.8.21.0138", "argumento": 2, "data_criacao": "2022-2-18", "status": 0, "caminho_logico_arquivo": "\\\\\\\\10.67.0.24\\\\\\\\nj.11\\\\\\\\GED\\\\\\\\PORTAL\\\\\\\\NJ.05\\\\\\\\BANCO C6 CONSIGNADO S.A\\\\\\\\ADIAMENTO DA PUBLICA\\u00c7\\u00c3O DA SENTEN\\u00c7A - 9000787-53.2021.8.21.0138 - 17-02-2022.pdf"}'
+2022-02-21 18:47:17,212:--Consumidor Fila: C6 | Uploads--:[*] Chamando o método que realiza o upload do arquivo
+2022-02-21 18:47:17,212:--C6--:Capturando o processo: 9000787-53.2021.8.21.0138
+2022-02-21 18:47:18,238:--C6--:Acessando a combo da pesquisa
+2022-02-21 18:47:19,326:--C6--:Preenchendo campo pesquisa
+2022-02-21 18:47:20,428:--C6--:Acessando botão de pesquisa
+2022-02-21 18:47:25,474:--C6--:Carregamento de tela não localizado...
+2022-02-21 18:47:32,560:--C6--:Clicando no número do processo
+2022-02-21 18:47:34,660:--C6--:Clicando em arquivos
+2022-02-21 18:54:11,275:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 18:54:11,275:--C6--:Iniciando o método de login no portal
+2022-02-21 18:54:12,537:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 18:54:13,581:--C6--:Preenchendo login
+2022-02-21 18:54:14,641:--C6--:Preenchendo a senha
+2022-02-21 18:54:15,733:--C6--:Acessando o portal
+2022-02-21 18:54:21,393:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 18:54:43,420:--C6--:Clicando no campo de digitar o código
+2022-02-21 18:55:11,289:--ManipulaBanco--:[x] Conectado ao Mongo
+2022-02-21 18:55:11,289:--C6--:Iniciando o método de login no portal
+2022-02-21 18:55:12,475:--C6--:Navegando para: https://gracco.corp.c6bank.com/login
+2022-02-21 18:55:13,514:--C6--:Preenchendo login
+2022-02-21 18:55:14,572:--C6--:Preenchendo a senha
+2022-02-21 18:55:15,640:--C6--:Acessando o portal
+2022-02-21 18:55:19,738:--C6--:Abrindo aplicativo OKTA para pegar o código
+2022-02-21 18:55:41,841:--C6--:Clicando no campo de digitar o código
+2022-02-21 18:55:49,061:--C6--:Acessando o portal
+2022-02-21 18:56:09,590:--C6--:Não encontrado erro de login
+2022-02-21 18:56:10,477:--C6--:Acessando o link: https://gracco.corp.c6bank.com/gestao-processos
+2022-02-21 18:56:15,494:--C6--:Carregamento de tela não localizado...
+2022-02-21 18:56:15,645:--Consumidor Fila: C6 | Uploads--:[*] Abrindo conexão...
+2022-02-21 18:56:15,687:--Consumidor Fila: C6 | Uploads--:[*] Criando canal...
+2022-02-21 18:56:15,718:--Consumidor Fila: C6 | Uploads--:[*] Setando a fila e preparando para consumo...
+2022-02-21 18:56:15,718:--Consumidor Fila: C6 | Uploads--:[*] Aguardando para consumo...
+2022-02-21 18:56:15,765:--Consumidor Fila: C6 | Uploads--:[x] Dados recebidos:  '{"numero_processo": "9000787-53.2021.8.21.0138", "argumento": 2, "data_criacao": "2022-2-18", "status": 0, "caminho_logico_arquivo": "\\\\\\\\10.67.0.24\\\\\\\\nj.11\\\\\\\\GED\\\\\\\\PORTAL\\\\\\\\NJ.05\\\\\\\\BANCO C6 CONSIGNADO S.A\\\\\\\\ADIAMENTO DA PUBLICA\\u00c7\\u00c3O DA SENTEN\\u00c7A - 9000787-53.2021.8.21.0138 - 17-02-2022.pdf"}'
+2022-02-21 18:56:15,765:--Consumidor Fila: C6 | Uploads--:[*] Chamando o método que realiza o upload do arquivo
+2022-02-21 18:56:15,765:--C6--:Capturando o processo: 9000787-53.2021.8.21.0138
+2022-02-21 18:56:16,817:--C6--:Acessando a combo da pesquisa
+2022-02-21 18:56:17,966:--C6--:Preenchendo campo pesquisa
+2022-02-21 18:56:19,082:--C6--:Acessando botão de pesquisa
+2022-02-21 18:56:24,132:--C6--:Carregamento de tela não localizado...
+2022-02-21 18:56:31,222:--C6--:Clicando no número do processo
+2022-02-21 18:56:33,341:--C6--:Clicando em arquivos
+2022-02-21 18:56:45,366:--C6--:Clicando em botão fechar
+2022-02-21 18:56:50,421:--C6--:Carregamento de tela não localizado...
+2022-02-21 18:56:53,702:--C6--:limpando o campo de pesquisa
+2022-02-21 18:56:53,903:--Consumidor Fila: C6 | Uploads--:[x] Upload:9000787-53.2021.8.21.0138 - realizado
+2022-02-21 18:56:53,951:--Consumidor Fila: C6 | Uploads--:[x] Dados recebidos:  '{"numero_processo": "9019164-95.2021.8.21.0001", "argumento": 2, "data_criacao": "2022-2-18", "status": 0, "caminho_logico_arquivo": "\\\\\\\\10.67.0.24\\\\\\\\nj.11\\\\\\\\GED\\\\\\\\PORTAL\\\\\\\\NJ.05\\\\\\\\BANCO C6 CONSIGNADO S.A\\\\\\\\ADIAMENTO DA PUBLICA\\u00c7\\u00c3O DA SENTEN\\u00c7A - 9019164-95.2021.8.21.0001 - 11-01-2022.pdf"}'
+2022-02-21 18:56:53,951:--Consumidor Fila: C6 | Uploads--:[*] Chamando o método que realiza o upload do arquivo
+2022-02-21 18:56:53,951:--C6--:Capturando o processo: 9019164-95.2021.8.21.0001
+2022-02-21 18:56:54,982:--C6--:Acessando a combo da pesquisa
+2022-02-21 18:56:56,055:--C6--:Preenchendo campo pesquisa
+2022-02-21 18:56:57,146:--C6--:Acessando botão de pesquisa
+2022-02-21 18:57:02,166:--C6--:Carregamento de tela não localizado...
+2022-02-21 18:57:09,262:--C6--:Clicando no número do processo
+2022-02-21 18:57:11,376:--C6--:Clicando em arquivos
